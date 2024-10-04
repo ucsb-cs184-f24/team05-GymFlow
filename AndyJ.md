@@ -1,1 +1,0 @@
-I am a fourth year CS major from Shanghai China. 
