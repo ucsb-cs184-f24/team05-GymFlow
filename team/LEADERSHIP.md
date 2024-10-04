@@ -1,3 +1,3 @@
-- Product Manager: Daniel Jensen
+- Product Owner: Daniel Jensen
 - Scrum Master: Thomas So
 - Scribe: Bryce Wang
