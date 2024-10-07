@@ -1,2 +1,1 @@
-The app provides information on the business of the gym at UCSB, which will help users know the best times to go. Having a busy gym can be frustrating for many students,
-so we will display the current occupancy at the gym to help users decide when to go.
+Tommy is a student at UCSB and wants to go to the gym but is worried that the gym may be busy. He wants to be able to check the status of the gym since he doesn't want to spend half the time waiting on machines.
