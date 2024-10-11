@@ -40,5 +40,10 @@ Skills/Background:
 Interests:
 - Backend, Database
 
-# Github Like
+# Resources
 - https://www.tutorialspoint.com/swift/index.htm
+- https://www.youtube.com/watch?v=HXoVSbwWUIk
+- https://www.hackingwithswift.com/
+- https://www.swift.org/getting-started/swiftui/
+- https://www.w3schools.in/swift/tutorials/
+
