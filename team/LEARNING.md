@@ -39,3 +39,11 @@ Skills/Background:
 
 Interests:
 - Backend, Database
+
+# Nandhan Natarajan
+Skills/Background:
+- C++, Python, Javascript, Java, React, and a little Swift
+
+Interests:
+- Full-stack, cross-platform app development
+- AI/ML

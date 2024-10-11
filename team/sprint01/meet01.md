@@ -4,3 +4,4 @@ Andy: Updating macOS for Xcode.
 Bryce: Updated my mac and XCode and was able to get my app running with no issues.  
 Winston: Complete homework 1. Didn't run into any issues and was apple to get the app running properly.  
 Nevin: Updating MacOs for Xcode  
+Nandhan: Setup XCode and was able to build and run hello world app on ios 18.
