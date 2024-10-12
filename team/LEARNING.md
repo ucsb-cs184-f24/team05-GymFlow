@@ -47,3 +47,20 @@ Skills/Background:
 Interests:
 - Full-stack, cross-platform app development
 - AI/ML
+
+# Resources
+- https://www.tutorialspoint.com/swift/index.htm
+- https://www.youtube.com/watch?v=HXoVSbwWUIk
+- https://www.hackingwithswift.com/
+- https://www.swift.org/getting-started/swiftui/
+- https://www.w3schools.in/swift/tutorials/
+- https://docs.swift.org/swift-book/documentation/the-swift-programming-language/thebasics/
+
+# Benefits
+- Real time previews of the UI as we code whcihc speeds up the development process
+- Unified framework can write code across different iOS devices
+- Doesn't need to write as much code allowing for more efficient development
+
+# Challenges
+- Most team members have never used Swift so they need to learn it from scratch
+- Xcode dependency if there are any bugs it will impact the development process
