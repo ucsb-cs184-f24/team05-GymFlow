@@ -46,6 +46,7 @@ Interests:
 - https://www.hackingwithswift.com/
 - https://www.swift.org/getting-started/swiftui/
 - https://www.w3schools.in/swift/tutorials/
+- https://docs.swift.org/swift-book/documentation/the-swift-programming-language/thebasics/
 
 # Benefits
 - Real time previews of the UI as we code whcihc speeds up the development process
