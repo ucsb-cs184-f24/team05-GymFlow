@@ -1,3 +1,4 @@
 - Product Owner: Daniel Hwang
 - Scrum Master: Thomas So
 - Scribe: Bryce Wang
+- Retro Leader: Thomas So
