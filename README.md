@@ -9,4 +9,3 @@ Our project looks to monitor activity at the UCSB Recreation Center so that stud
   * dhwang154 , Daniel Hwang
   * andyjin1 , Andy Jin
   * Tommygithubaccount123 , Thomas So
-  * nandyy719 , Nandhan Natarajan
