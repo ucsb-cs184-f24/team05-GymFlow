@@ -12,7 +12,7 @@
 
 ## Retro Assessment
 
-* A brief description of what retro outline or process you used.
-* A brief assessment of how it went.
+* A brief description of what retro outline or process you used: We all talked in person about a goal, change, and measurement to agree on.
+* A brief assessment of how it went: It went smoothly, the retro went well.
 * What advice would you give to the next person leading a retro
-  based on what you learned today?
+  based on what you learned today: Initiate the meeting and ask the questions.
