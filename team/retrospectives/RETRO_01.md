@@ -16,3 +16,8 @@
 * A brief assessment of how it went: It went smoothly, the retro went well.
 * What advice would you give to the next person leading a retro
   based on what you learned today: Initiate the meeting and ask the questions.
+
+
+## Outcomes
+
+* With the retro goal, we were able to agree on how the home screen looks with the gym busy level. The Kanban board is not as actively used, but is better now.
