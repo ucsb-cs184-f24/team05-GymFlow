@@ -15,7 +15,7 @@ class LogoutViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemGreen
+        view.backgroundColor = .systemBlue
         
         view.addSubview(logOutButton)
         

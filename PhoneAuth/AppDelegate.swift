@@ -6,6 +6,8 @@ import UserNotifications
 @main
 class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
+    var window: UIWindow? // Declare the window property
+
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         
@@ -26,18 +28,22 @@ class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDele
 
         // Register for remote notifications
         application.registerForRemoteNotifications()
+        
+        // Initialize the main window and set MainViewController as root
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = MainViewController()
+        window?.makeKeyAndVisible()
 
         return true
     }
 
-    // ... (rest of the AppDelegate methods remain unchanged)
-}
+    // Handle APNs device token registration and Firebase token configuration
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         let token = deviceToken.map { String(format: "%02.2hhx", $0) }.joined()
         print("APNs device token: \(token)")
 
         // Pass the token to Firebase
-        Auth.auth().setAPNSToken(deviceToken, type: .prod) // Changed from .unknown to .prod
+        Auth.auth().setAPNSToken(deviceToken, type: .prod)
     }
 
     func application(_ application: UIApplication,
@@ -68,4 +74,4 @@ class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDele
             completionHandler([.alert, .badge, .sound])
         }
     }
-
+}

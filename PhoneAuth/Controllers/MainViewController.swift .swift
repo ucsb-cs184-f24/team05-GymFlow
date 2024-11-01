@@ -19,6 +19,6 @@ class MainViewController: UITabBarController {
         // Customize tab bar appearance
         tabBar.tintColor = .white
         tabBar.unselectedItemTintColor = .lightGray
-        tabBar.backgroundColor = .systemGreen
+        tabBar.backgroundColor = .systemBlue
     }
 }
