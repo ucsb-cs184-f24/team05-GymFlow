@@ -25,7 +25,7 @@ xed .
 5. Make sure build target is for iPhone simulator
 6. Add API key
    - Make account [here](https://besttime.app/)
-   - Use public API key on line 6 PhoneAuth/Controllers/BusyLevelView.swift
+   - Use public API key on line 6 PhoneAuth/Controllers/BusyLevelModel.swift
 
 # team05-GymFlow
 
