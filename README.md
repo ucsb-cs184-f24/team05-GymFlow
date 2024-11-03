@@ -1,3 +1,32 @@
+# HOW TO BUILD
+
+1. Clone
+
+```
+git@github.com:ucsb-cs184-f24/team05-GymFlow.git
+```
+
+2. Change to this branch
+
+```
+cd team05-GymFlow
+git checkout -b prod-andy-tommy origin/prod-andy-tommy
+```
+
+3. Open Xcode
+
+```
+xed .
+```
+4. Get Google plist credentials on Slack, then replace the one in PhoneAuth in Xcode
+
+   Make sure to delete the original one. Only the one from Slack should exist.
+
+5. Make sure build target is for iPhone simulator
+6. Add API key
+   - Make account [here](https://besttime.app/)
+   - Use public API key on line 6 PhoneAuth/Controllers/BusyLevelView.swift
+
 # team05-GymFlow
 
 Our project looks to monitor activity at the UCSB Recreation Center so that students can gauge how busy the gym is.
