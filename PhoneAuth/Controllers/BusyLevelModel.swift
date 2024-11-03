@@ -3,7 +3,7 @@ import Foundation
 class BusyLevelModel: ObservableObject {
     @Published var busyLevelText: String = "Update"
     
-    private let apiKey: String = "pub_9b71567b8c9a47e4a332171f7182be0a"
+    private let apiKey: String = "YOUR API KEY"
     private let venueId: String = "ven_5965782d62435251644858524159365f51575f357263394a496843"
     
     func fetchBusyLevel() {
