@@ -1,10 +1,7 @@
 import SwiftUI
 
 struct BusyLevelView: View {
-    @Binding var busyLevelText: String
-    
-    private let apiKey: String = "YOUR API KEY"
-    private let venueId: String = "ven_5965782d62435251644858524159365f51575f357263394a496843"
+    @ObservedObject var model: BusyLevelModel
     
     var body: some View {
         ZStack {
@@ -25,27 +22,27 @@ struct BusyLevelView: View {
                 
                 // Busy level text with gradient border
                 ZStack {
-                    Text(busyLevelText)
+                    Text(model.busyLevelText)
                         .font(.system(size: 48, weight: .semibold, design: .rounded))
-                        .foregroundColor(busyLevelColor(busyLevelText))
-                        .shadow(color: busyLevelColor(busyLevelText).opacity(0.4), radius: 10, x: 0, y: 5)
+                        .foregroundColor(busyLevelColor(model.busyLevelText))
+                        .shadow(color: busyLevelColor(model.busyLevelText).opacity(0.4), radius: 10, x: 0, y: 5)
                     
                     Circle()
                         .strokeBorder(
                             LinearGradient(
-                                gradient: Gradient(colors: [busyLevelColor(busyLevelText).opacity(0.6), .white]),
+                                gradient: Gradient(colors: [busyLevelColor(model.busyLevelText).opacity(0.6), .white]),
                                 startPoint: .topLeading,
                                 endPoint: .bottomTrailing
                             ),
                             lineWidth: 5
                         )
                         .frame(width: 180, height: 180)
-                        .shadow(color: busyLevelColor(busyLevelText).opacity(0.5), radius: 15, x: 0, y: 5)
+                        .shadow(color: busyLevelColor(model.busyLevelText).opacity(0.5), radius: 15, x: 0, y: 5)
                 }
                 
                 // Button to update busy level
                 Button(action: {
-                    fetchBusyLevel()
+                    model.fetchBusyLevel()
                 }) {
                     Text("Update Busy Level")
                         .font(.headline)
@@ -81,44 +78,5 @@ struct BusyLevelView: View {
         default:
             return .gray
         }
-    }
-    
-    func fetchBusyLevel() {
-        // Get current day of the week and hour
-        let currentDate = Date()
-        let calendar = Calendar.current
-        let dayInt = calendar.component(.weekday, from: currentDate) // Sunday is 1, Saturday is 7
-        let hour = calendar.component(.hour, from: currentDate)
-        
-        // Construct URL with dynamic parameters
-        var urlComponents = URLComponents(string: "https://besttime.app/api/v1/forecasts/hour")!
-        urlComponents.queryItems = [
-            URLQueryItem(name: "api_key_public", value: apiKey),
-            URLQueryItem(name: "venue_id", value: venueId),
-            URLQueryItem(name: "day_int", value: "\(dayInt)"),
-            URLQueryItem(name: "hour", value: "\(hour)")
-        ]
-        
-        guard let url = urlComponents.url else { return }
-        
-        let task = URLSession.shared.dataTask(with: url) { data, response, error in
-            guard let data = data, error == nil else { return }
-            
-            do {
-                if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
-                   let analysis = json["analysis"] as? [String: Any],
-                   let hourAnalysis = analysis["hour_analysis"] as? [String: Any],
-                   let intensityText = hourAnalysis["intensity_txt"] as? String {
-                    
-                    DispatchQueue.main.async {
-                        busyLevelText = intensityText
-                    }
-                }
-            } catch {
-                print("Failed to parse JSON: \(error)")
-            }
-        }
-        
-        task.resume()
     }
 }
