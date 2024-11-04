@@ -14,12 +14,12 @@ class BusyLevelModel: ObservableObject {
         let hour = calendar.component(.hour, from: currentDate)
         
         // Construct URL with dynamic parameters
-        var urlComponents = URLComponents(string: "https://besttime.app/api/v1/forecasts/hour")!
+        var urlComponents = URLComponents(string: "https://besttime.app/api/v1/forecasts/now")!
         urlComponents.queryItems = [
             URLQueryItem(name: "api_key_public", value: apiKey),
             URLQueryItem(name: "venue_id", value: venueId),
-            URLQueryItem(name: "day_int", value: "\(dayInt)"),
-            URLQueryItem(name: "hour", value: "\(hour)")
+//            URLQueryItem(name: "day_int", value: "\(dayInt)"),
+//            URLQueryItem(name: "hour", value: "\(hour)")
         ]
         
         guard let url = urlComponents.url else { return }
