@@ -20,8 +20,9 @@ xed .
 4. Get Google plist credentials on Slack, then replace the one in PhoneAuth in Xcode
 
    Make sure to delete the original one. Only the one from Slack should exist. (Drag the file into Xcode to replace)
+   [LINK TO SLACK](https://ucsb-cs184-f24.slack.com/files/U07PH3AMD1S/F07TNUEDCFQ/googleservice-info.plist)
 
-5. Make sure build target is for iPhone simulator, then press play to run
+6. Make sure build target is for iPhone simulator, then press play to run
 
 # team05-GymFlow
 
