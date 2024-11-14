@@ -1,5 +1,5 @@
 Files for HW4: Implementation
 by Winston Wang
 
-- homescreen
-- logscreen
+- homescreen.png
+- logscreen.png
