@@ -16,3 +16,6 @@ build/
 # Swift Package Manager
 .swiftpm/
 .build/
+
+# Plist
+GoogleService-Info.plist
