@@ -18,4 +18,5 @@ build/
 .build/
 
 # Plist
-GoogleService-Info.plist
+PhoneAuth/GoogleService-Info.plist
+
