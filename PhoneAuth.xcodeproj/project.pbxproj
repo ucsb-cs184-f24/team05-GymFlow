@@ -18,6 +18,7 @@
 		625658562CEC259A00576A6E /* ForecastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625658552CEC258B00576A6E /* ForecastModel.swift */; };
 		625658582CEC25C200576A6E /* HistogramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625658572CEC25B800576A6E /* HistogramView.swift */; };
 		6256585A2CEC25E900576A6E /* ForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625658592CEC25E400576A6E /* ForecastView.swift */; };
+		6256585E2CEEA39600576A6E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6256585D2CEEA39600576A6E /* GoogleService-Info.plist */; };
 		6259ECF42CC5927200EC973F /* Pods_PhoneAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C872189BD874C04C50040EA8 /* Pods_PhoneAuth.framework */; };
 		6259ECF52CC5927200EC973F /* Pods_PhoneAuth.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C872189BD874C04C50040EA8 /* Pods_PhoneAuth.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		62E712292CC58B080064CBF4 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E712282CC58B080064CBF4 /* AuthManager.swift */; };
@@ -56,6 +57,7 @@
 		625658552CEC258B00576A6E /* ForecastModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastModel.swift; sourceTree = "<group>"; };
 		625658572CEC25B800576A6E /* HistogramView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistogramView.swift; sourceTree = "<group>"; };
 		625658592CEC25E400576A6E /* ForecastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastView.swift; sourceTree = "<group>"; };
+		6256585D2CEEA39600576A6E /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		62E712282CC58B080064CBF4 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		62E7122B2CC58CDB0064CBF4 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		62E7122D2CC58CE60064CBF4 /* SMSCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMSCodeViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				6201F2082CC58A3E00E1BAEB /* Assets.xcassets */,
 				6201F20A2CC58A3E00E1BAEB /* LaunchScreen.storyboard */,
 				6201F20D2CC58A3E00E1BAEB /* Info.plist */,
+				6256585D2CEEA39600576A6E /* GoogleService-Info.plist */,
 			);
 			path = PhoneAuth;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6201F2092CC58A3E00E1BAEB /* Assets.xcassets in Resources */,
+				6256585E2CEEA39600576A6E /* GoogleService-Info.plist in Resources */,
 				6201F20C2CC58A3E00E1BAEB /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
