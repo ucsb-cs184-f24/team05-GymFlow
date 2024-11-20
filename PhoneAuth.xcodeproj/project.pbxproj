@@ -15,13 +15,8 @@
 		6201F20C2CC58A3E00E1BAEB /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 6201F20B2CC58A3E00E1BAEB /* Base */; };
 		622D19582CC753F100D9C2D1 /* MainViewController.swift .swift in Sources */ = {isa = PBXBuildFile; fileRef = 622D19572CC753F100D9C2D1 /* MainViewController.swift .swift */; };
 		622D195A2CC7547E00D9C2D1 /* LogoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622D19592CC7547E00D9C2D1 /* LogoutViewController.swift */; };
-		625658542CEBF67500576A6E /* ForeCastController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625658532CEBF5F600576A6E /* ForeCastController.swift */; };
-		625658562CEC259A00576A6E /* ForecastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625658552CEC258B00576A6E /* ForecastModel.swift */; };
-		625658582CEC25C200576A6E /* HistogramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625658572CEC25B800576A6E /* HistogramView.swift */; };
-		6256585A2CEC25E900576A6E /* ForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625658592CEC25E400576A6E /* ForecastView.swift */; };
 		6259ECF42CC5927200EC973F /* Pods_PhoneAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C872189BD874C04C50040EA8 /* Pods_PhoneAuth.framework */; };
 		6259ECF52CC5927200EC973F /* Pods_PhoneAuth.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C872189BD874C04C50040EA8 /* Pods_PhoneAuth.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		626729402CE03C61006165AA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6267293F2CE03C61006165AA /* GoogleService-Info.plist */; };
 		62E712292CC58B080064CBF4 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E712282CC58B080064CBF4 /* AuthManager.swift */; };
 		62E7122C2CC58CDB0064CBF4 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E7122B2CC58CDB0064CBF4 /* AccountViewController.swift */; };
 		62E7122E2CC58CE60064CBF4 /* SMSCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E7122D2CC58CE60064CBF4 /* SMSCodeViewController.swift */; };
@@ -55,11 +50,6 @@
 		62075E402CC6BF7700C0C0B1 /* PhoneAuth.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PhoneAuth.entitlements; sourceTree = "<group>"; };
 		622D19572CC753F100D9C2D1 /* MainViewController.swift .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController.swift .swift"; sourceTree = "<group>"; };
 		622D19592CC7547E00D9C2D1 /* LogoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutViewController.swift; sourceTree = "<group>"; };
-		625658532CEBF5F600576A6E /* ForeCastController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForeCastController.swift; sourceTree = "<group>"; };
-		625658552CEC258B00576A6E /* ForecastModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastModel.swift; sourceTree = "<group>"; };
-		625658572CEC25B800576A6E /* HistogramView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistogramView.swift; sourceTree = "<group>"; };
-		625658592CEC25E400576A6E /* ForecastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastView.swift; sourceTree = "<group>"; };
-		6267293F2CE03C61006165AA /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		62E712282CC58B080064CBF4 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		62E7122B2CC58CDB0064CBF4 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		62E7122D2CC58CE60064CBF4 /* SMSCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMSCodeViewController.swift; sourceTree = "<group>"; };
@@ -108,7 +98,6 @@
 				6201F1FF2CC58A3D00E1BAEB /* AppDelegate.swift */,
 				62E712282CC58B080064CBF4 /* AuthManager.swift */,
 				6201F2012CC58A3D00E1BAEB /* SceneDelegate.swift */,
-				6267293F2CE03C61006165AA /* GoogleService-Info.plist */,
 				0295C4C62CD8428100BB23FC /* GoogleService-Info.plist */,
 				6201F2082CC58A3E00E1BAEB /* Assets.xcassets */,
 				6201F20A2CC58A3E00E1BAEB /* LaunchScreen.storyboard */,
@@ -120,10 +109,6 @@
 		62E7122A2CC58CAC0064CBF4 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				625658592CEC25E400576A6E /* ForecastView.swift */,
-				625658572CEC25B800576A6E /* HistogramView.swift */,
-				625658532CEBF5F600576A6E /* ForeCastController.swift */,
-				625658552CEC258B00576A6E /* ForecastModel.swift */,
 				C26487F02CD8301100ACC29B /* BusyLevelModel.swift */,
 				C26487EC2CD82A2A00ACC29B /* BusyLevelView.swift */,
 				6201F2032CC58A3D00E1BAEB /* PhoneViewController.swift */,
@@ -214,7 +199,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6201F2092CC58A3E00E1BAEB /* Assets.xcassets in Resources */,
-				626729402CE03C61006165AA /* GoogleService-Info.plist in Resources */,
 				6201F20C2CC58A3E00E1BAEB /* Base in Resources */,
 				0295C4C72CD8428200BB23FC /* GoogleService-Info.plist in Resources */,
 			);
@@ -269,19 +253,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				625658582CEC25C200576A6E /* HistogramView.swift in Sources */,
 				6201F2042CC58A3D00E1BAEB /* PhoneViewController.swift in Sources */,
 				622D19582CC753F100D9C2D1 /* MainViewController.swift .swift in Sources */,
 				62E7122C2CC58CDB0064CBF4 /* AccountViewController.swift in Sources */,
 				62E712292CC58B080064CBF4 /* AuthManager.swift in Sources */,
-				625658542CEBF67500576A6E /* ForeCastController.swift in Sources */,
 				6201F2002CC58A3D00E1BAEB /* AppDelegate.swift in Sources */,
 				6201F2022CC58A3D00E1BAEB /* SceneDelegate.swift in Sources */,
 				622D195A2CC7547E00D9C2D1 /* LogoutViewController.swift in Sources */,
 				C26487F12CD8301100ACC29B /* BusyLevelModel.swift in Sources */,
 				C26487ED2CD82A2A00ACC29B /* BusyLevelView.swift in Sources */,
-				6256585A2CEC25E900576A6E /* ForecastView.swift in Sources */,
-				625658562CEC259A00576A6E /* ForecastModel.swift in Sources */,
 				62E7122E2CC58CE60064CBF4 /* SMSCodeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

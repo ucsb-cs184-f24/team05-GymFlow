@@ -14,11 +14,7 @@ class MainViewController: UITabBarController {
         logoutVC.tabBarItem = UITabBarItem(title: "Logout", image: UIImage(systemName: "arrow.backward.circle"), tag: 1)
         
         // Set view controllers for the tab bar
-        
-        let forecastVC = ForeCastController()
-        forecastVC.tabBarItem = UITabBarItem(title: "Forecast", image: UIImage(systemName: "figure.walk.circle"), tag: 2)
-        
-        viewControllers = [homeVC, forecastVC,logoutVC]
+        viewControllers = [homeVC, logoutVC]
         
         // Customize tab bar appearance
         tabBar.tintColor = .white
