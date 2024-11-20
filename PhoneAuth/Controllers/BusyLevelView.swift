@@ -68,15 +68,22 @@ struct BusyLevelView: View {
     private func busyLevelColor(_ busyLevel: String) -> Color {
         switch busyLevel.lowercased() {
         case "quiet":
-            return .green
+            return .green // Indicates a calm or quiet period
+        case "low":
+            return .mint
+        case "below average":
+            return .mint // Slightly busier than "quiet" but still calm
         case "average":
-            return .blue
+            return .yellow // Neutral and balanced
         case "busy":
-            return .orange
+            return .orange // Noticeably busy
+        case "above average":
+            return .red // More crowded than busy
         case "very busy":
-            return .red
+            return .purple // High intensity, extremely busy
         default:
-            return .gray
+            return .gray // Unknown or undefined level
         }
     }
+
 }
