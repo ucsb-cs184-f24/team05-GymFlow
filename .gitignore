@@ -16,3 +16,7 @@ build/
 # Swift Package Manager
 .swiftpm/
 .build/
+
+# Plist
+PhoneAuth/GoogleService-Info.plist
+
