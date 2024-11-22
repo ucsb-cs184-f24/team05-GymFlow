@@ -12,8 +12,10 @@ When first opening the app, users will first be prompted to enter a phone number
 
 ## Gym Busy Level
 In our main page, we display the level of business at the UCSB gym. If you want the current business, there is an Update Busy Level button that will give the most up to date information.
+
 <img width="344" alt="Screenshot 2024-11-21 at 9 56 26 PM" src="https://github.com/user-attachments/assets/3374b782-39e3-447f-9583-d37117a4b4a5">
 
 ## Forecast
 In the forecast page, we show a graph of the predicted level of business at the gym. This graph can be updated by clicking on the Predict button.
+
 <img width="349" alt="Screenshot 2024-11-21 at 10 01 26 PM" src="https://github.com/user-attachments/assets/c44e96d2-d21f-4cc5-ba0a-a32ea14cb408">
