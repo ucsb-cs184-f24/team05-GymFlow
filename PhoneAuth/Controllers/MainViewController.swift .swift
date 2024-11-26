@@ -15,10 +15,15 @@ class MainViewController: UITabBarController {
         
         // Set view controllers for the tab bar
         
-        let forecastVC = ForeCastController()
-        forecastVC.tabBarItem = UITabBarItem(title: "Forecast", image: UIImage(systemName: "figure.walk.circle"), tag: 2)
+        let aiVC = AIController()
+        aiVC.tabBarItem = UITabBarItem(title: "AI", image: UIImage(systemName: "person.fill"), tag: 2)
         
-        viewControllers = [homeVC, forecastVC,logoutVC]
+        let forecastVC = ForeCastController()
+        forecastVC.tabBarItem = UITabBarItem(title: "Forecast", image: UIImage(systemName: "figure.walk.circle"), tag: 3)
+        
+        
+        
+        viewControllers = [homeVC, forecastVC, aiVC, logoutVC]
         
         // Customize tab bar appearance
         tabBar.tintColor = .white

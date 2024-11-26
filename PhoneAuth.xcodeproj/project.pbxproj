@@ -26,6 +26,9 @@
 		62E7122E2CC58CE60064CBF4 /* SMSCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E7122D2CC58CE60064CBF4 /* SMSCodeViewController.swift */; };
 		C26487ED2CD82A2A00ACC29B /* BusyLevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26487EC2CD82A2A00ACC29B /* BusyLevelView.swift */; };
 		C26487F12CD8301100ACC29B /* BusyLevelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26487F02CD8301100ACC29B /* BusyLevelModel.swift */; };
+		C2DFA7B22CF555CC00854B1D /* AIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DFA7B12CF555C700854B1D /* AIController.swift */; };
+		C2DFA7B52CF55D0E00854B1D /* GoogleGenerativeAI in Frameworks */ = {isa = PBXBuildFile; productRef = C2DFA7B42CF55D0E00854B1D /* GoogleGenerativeAI */; };
+		C2DFA7B82CF55E2D00854B1D /* GeminiAPI.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2DFA7B72CF55E2200854B1D /* GeminiAPI.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -63,6 +66,8 @@
 		62E7122D2CC58CE60064CBF4 /* SMSCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMSCodeViewController.swift; sourceTree = "<group>"; };
 		C26487EC2CD82A2A00ACC29B /* BusyLevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusyLevelView.swift; sourceTree = "<group>"; };
 		C26487F02CD8301100ACC29B /* BusyLevelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusyLevelModel.swift; sourceTree = "<group>"; };
+		C2DFA7B12CF555C700854B1D /* AIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIController.swift; sourceTree = "<group>"; };
+		C2DFA7B72CF55E2200854B1D /* GeminiAPI.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = GeminiAPI.plist; sourceTree = "<group>"; };
 		C872189BD874C04C50040EA8 /* Pods_PhoneAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhoneAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD26FBF4FBA55DA926CFB487 /* Pods-PhoneAuth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhoneAuth.release.xcconfig"; path = "Target Support Files/Pods-PhoneAuth/Pods-PhoneAuth.release.xcconfig"; sourceTree = "<group>"; };
 		CEBC77F7877D358FC0823B5C /* Pods-PhoneAuth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhoneAuth.debug.xcconfig"; path = "Target Support Files/Pods-PhoneAuth/Pods-PhoneAuth.debug.xcconfig"; sourceTree = "<group>"; };
@@ -74,6 +79,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6259ECF42CC5927200EC973F /* Pods_PhoneAuth.framework in Frameworks */,
+				C2DFA7B52CF55D0E00854B1D /* GoogleGenerativeAI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +107,7 @@
 		6201F1FE2CC58A3D00E1BAEB /* PhoneAuth */ = {
 			isa = PBXGroup;
 			children = (
+				C2DFA7B72CF55E2200854B1D /* GeminiAPI.plist */,
 				62075E402CC6BF7700C0C0B1 /* PhoneAuth.entitlements */,
 				62E7122A2CC58CAC0064CBF4 /* Controllers */,
 				6201F1FF2CC58A3D00E1BAEB /* AppDelegate.swift */,
@@ -117,6 +124,7 @@
 		62E7122A2CC58CAC0064CBF4 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C2DFA7B12CF555C700854B1D /* AIController.swift */,
 				625658592CEC25E400576A6E /* ForecastView.swift */,
 				625658572CEC25B800576A6E /* HistogramView.swift */,
 				625658532CEBF5F600576A6E /* ForeCastController.swift */,
@@ -196,6 +204,9 @@
 				Base,
 			);
 			mainGroup = 6201F1F32CC58A3D00E1BAEB;
+			packageReferences = (
+				C2DFA7B32CF55D0E00854B1D /* XCRemoteSwiftPackageReference "generative-ai-swift" */,
+			);
 			productRefGroup = 6201F1FD2CC58A3D00E1BAEB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -210,6 +221,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2DFA7B82CF55E2D00854B1D /* GeminiAPI.plist in Resources */,
 				6201F2092CC58A3E00E1BAEB /* Assets.xcassets in Resources */,
 				6256585E2CEEA39600576A6E /* GoogleService-Info.plist in Resources */,
 				6201F20C2CC58A3E00E1BAEB /* Base in Resources */,
@@ -269,6 +281,7 @@
 				6201F2042CC58A3D00E1BAEB /* PhoneViewController.swift in Sources */,
 				622D19582CC753F100D9C2D1 /* MainViewController.swift .swift in Sources */,
 				62E7122C2CC58CDB0064CBF4 /* AccountViewController.swift in Sources */,
+				C2DFA7B22CF555CC00854B1D /* AIController.swift in Sources */,
 				62E712292CC58B080064CBF4 /* AuthManager.swift in Sources */,
 				625658542CEBF67500576A6E /* ForeCastController.swift in Sources */,
 				6201F2002CC58A3D00E1BAEB /* AppDelegate.swift in Sources */,
@@ -497,6 +510,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C2DFA7B32CF55D0E00854B1D /* XCRemoteSwiftPackageReference "generative-ai-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/generative-ai-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C2DFA7B42CF55D0E00854B1D /* GoogleGenerativeAI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C2DFA7B32CF55D0E00854B1D /* XCRemoteSwiftPackageReference "generative-ai-swift" */;
+			productName = GoogleGenerativeAI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6201F1F42CC58A3D00E1BAEB /* Project object */;
 }
