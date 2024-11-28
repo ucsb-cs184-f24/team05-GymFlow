@@ -19,4 +19,8 @@ build/
 
 # Plist
 PhoneAuth/GoogleService-Info.plist
+PhoneAuth/GeminiAPI.plist
 
+PhoneAuth.xcodeproj/xcuserdata/
+PhoneAuth.xcworkspace/xcshareddata/
+Pods/Pods.xcodeproj/xcuserdata/

@@ -23,6 +23,9 @@ xed .
    Make sure to delete the original one. Only the one from Slack should exist. (Drag the file into Xcode to replace)
    [LINK TO SLACK](https://ucsb-cs184-f24.slack.com/files/U07PH3AMD1S/F07TNUEDCFQ/googleservice-info.plist)
 
+5. Get GeminiAPI plist on Slack. Drag into PhoneAuth.
+   [LINK TO SLACK](https://ucsb-cs184-f24.slack.com/files/U07PC0X8SLV/F082U5B6AGZ/geminiapi.plist)
+
 6. Make sure build target is for iPhone simulator (>= 18.0), then press play to run
 
 # team05-GymFlow
