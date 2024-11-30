@@ -9,7 +9,7 @@ class MealPlanViewController: UIViewController {
     private let diningHalls = ["Carrillo", "De La Guerra", "Portola", "Ortega"]
     private let mealTypes = ["Breakfast", "Lunch", "Dinner"]
     static let baseURL = "https://api.ucsb.edu/dining/menu/v1"
-    static let apiKey = ""
+    
     
     private let activityIndicator: UIActivityIndicatorView = {
             let indicator = UIActivityIndicatorView(style: .large)
@@ -198,8 +198,8 @@ class MealPlanViewController: UIViewController {
         // Get today's date in the required format
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
-        //let today = dateFormatter.string(from: Date())
-        let today = "2024-11-22"
+        let today = dateFormatter.string(from: Date())
+        //let today = "2024-11-22"
         // Show loading indicator
         
         

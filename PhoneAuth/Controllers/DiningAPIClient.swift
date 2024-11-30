@@ -1,10 +1,3 @@
-//
-//  DiningAPIClient.swift
-//  PhoneAuth
-//
-//  Created by Nevin Manimaran on 11/29/24.
-//
-
 import Foundation
 
 class DiningAPIClient {
@@ -13,8 +6,24 @@ class DiningAPIClient {
     private let apiKey: String
     
     private init() {
-        self.apiKey = MealPlanViewController.apiKey
+        let loadedApiKey = DiningAPIClient.loadAPIKey()
+                self.apiKey = loadedApiKey ?? ""
+                
+                if self.apiKey.isEmpty {
+                    print("Warning: API key is empty. Make sure UCSB.plist exists and contains a valid API key.")
+                }
     }
+    private static func loadAPIKey() -> String? {
+        guard let path = Bundle.main.path(forResource: "UCSB", ofType: "plist"),
+              let xml = FileManager.default.contents(atPath: path),
+              let plist = try? PropertyListSerialization.propertyList(from: xml, options: [], format: nil),
+              let dict = plist as? [String: Any],
+              let apiKey = dict["key"] as? String else {
+            return nil
+        }
+        return apiKey
+    }
+    
     
     private func createRequest(path: String) -> URLRequest {
         var request = URLRequest(url: URL(string: baseURL + path)!)
