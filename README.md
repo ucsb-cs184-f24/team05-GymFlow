@@ -25,8 +25,9 @@ xed .
 
 5. Get GeminiAPI plist on Slack. Drag into PhoneAuth.
    [LINK TO SLACK](https://ucsb-cs184-f24.slack.com/files/U07PC0X8SLV/F082U5B6AGZ/geminiapi.plist)
-
-6. Make sure build target is for iPhone simulator (>= 18.0), then press play to run
+6. Get UCSB API on slack. Drag into PhoneAuth
+    [LINK TO SLACK](https://ucsb-cs184-f24.slack.com/files/U07PDMYDJBY/F082W4NELFQ/ucsb.plist)
+7. Make sure build target is for iPhone simulator (>= 18.0), then press play to run
 
 # team05-GymFlow
 
