@@ -9,7 +9,7 @@ class MealPlanViewController: UIViewController {
     private let diningHalls = ["Carrillo", "De La Guerra", "Portola", "Ortega"]
     private let mealTypes = ["Breakfast", "Lunch", "Dinner"]
     static let baseURL = "https://api.ucsb.edu/dining/menu/v1"
-    static let apiKey = "8SlrYH3F7XZh6PmGqub2l8y4pnBKdfiQ"
+    static let apiKey = ""
     
     private let activityIndicator: UIActivityIndicatorView = {
             let indicator = UIActivityIndicatorView(style: .large)
