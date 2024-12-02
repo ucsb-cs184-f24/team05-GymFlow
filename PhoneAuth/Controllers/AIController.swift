@@ -36,26 +36,25 @@ class AIController: UIViewController {
     }
     
     private func setupButtons() {
-        let buttonTitles = ["Push", "Pull", "Legs", "Cardio"]
-        let stackView = UIStackView()
-        stackView.axis = .vertical
-        stackView.distribution = .fillEqually // Ensure equal-sized buttons
-        stackView.alignment = .fill
-        stackView.spacing = 20 // Space between buttons
-        
-        for title in buttonTitles {
-            let button = UIButton(type: .system)
-            button.setTitle(title, for: .normal)
-            button.setTitleColor(.white, for: .normal)
-            button.backgroundColor = .systemBlue
-            button.layer.cornerRadius = 10
-            button.addTarget(self, action: #selector(buttonTapped(_:)), for: .touchUpInside)
-            
-            // Add a fixed height constraint to make buttons larger
-            button.heightAnchor.constraint(equalToConstant: 60).isActive = true
-            
-            stackView.addArrangedSubview(button)
-        }
+        let buttonTitles = ["Push", "Pull", "Legs", "Cardio", "Meal Plan"]
+                let stackView = UIStackView()
+                stackView.axis = .vertical
+                stackView.distribution = .fillEqually
+                stackView.alignment = .fill
+                stackView.spacing = 20
+                
+                for title in buttonTitles {
+                    let button = UIButton(type: .system)
+                    button.setTitle(title, for: .normal)
+                    button.setTitleColor(.white, for: .normal)
+                    button.backgroundColor = title == "Meal Plan" ? .systemOrange : .systemBlue
+                    button.layer.cornerRadius = 10
+                    button.addTarget(self, action: #selector(buttonTapped(_:)), for: .touchUpInside)
+                    
+                    button.heightAnchor.constraint(equalToConstant: 60).isActive = true
+                    
+                    stackView.addArrangedSubview(button)
+                }
         
         // The "Show Workout" button will be added dynamically later
         let showWorkoutButton = UIButton(type: .system)
@@ -84,7 +83,7 @@ class AIController: UIViewController {
     
     @objc private func buttonTapped(_ sender: UIButton) {
         guard let title = sender.titleLabel?.text else { return }
-        
+                
         // Ensure the generative model is initialized before using it
         guard let generativeModel = generativeModel else {
             print("GenerativeModel is not initialized")
@@ -92,17 +91,27 @@ class AIController: UIViewController {
         }
         
         // Fetch the workout prompt using the GenerativeModel API
-        fetchWorkoutPrompt(for: title, generativeModel: generativeModel) { [weak self] success, message in
-            self?.showPopup(message: message)
-            
-            // If the API call was successful, save the workout text and show the button
-            if success {
-                self?.workoutText = message // Save the returned workout text
-                self?.showWorkoutButton?.isHidden = false // Show the "Show Workout" button
+        if title == "Meal Plan" {
+            presentMealPlanView()
+        }
+        else{
+            fetchWorkoutPrompt(for: title, generativeModel: generativeModel) {
+                [weak self] success, message in
+                self?.showPopup(message: message)
+                
+                // If the API call was successful, save the workout text and show the button
+                if success {
+                    self?.workoutText = message // Save the returned workout text
+                    self?.showWorkoutButton?.isHidden = false // Show the "Show Workout" button
+                }
             }
         }
     }
-    
+    private func presentMealPlanView() {
+            let mealPlanVC = MealPlanViewController()
+            mealPlanVC.modalPresentationStyle = .fullScreen
+            present(mealPlanVC, animated: true, completion: nil)
+        }
     private func fetchWorkoutPrompt(for action: String, generativeModel: GenerativeModel, completion: @escaping (Bool, String) -> Void) {
         // Construct the prompt based on the action
         let prompt = "Give me a workout for \(action.lowercased()). Max 1000 characters, bullet point format with dashes."

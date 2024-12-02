@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02DB66A32CFE6A6E008E0F89 /* UCSB.plist in Resources */ = {isa = PBXBuildFile; fileRef = 02DB66A22CFE6A6E008E0F89 /* UCSB.plist */; };
+		4B4AAA992CF989250090A3F2 /* MealPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4AAA982CF989170090A3F2 /* MealPlanViewController.swift */; };
+		4B4AAA9B2CF992020090A3F2 /* DiningAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4AAA9A2CF991F50090A3F2 /* DiningAPIClient.swift */; };
+		4B4AAAA32CFAEBAA0090A3F2 /* GeminiAPI.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B4AAAA22CFAEBAA0090A3F2 /* GeminiAPI.plist */; };
+		4B4AAAA72CFAEBC90090A3F2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B4AAAA62CFAEBC90090A3F2 /* GoogleService-Info.plist */; };
 		6201F2002CC58A3D00E1BAEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6201F1FF2CC58A3D00E1BAEB /* AppDelegate.swift */; };
 		6201F2022CC58A3D00E1BAEB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6201F2012CC58A3D00E1BAEB /* SceneDelegate.swift */; };
 		6201F2042CC58A3D00E1BAEB /* PhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6201F2032CC58A3D00E1BAEB /* PhoneViewController.swift */; };
@@ -47,6 +52,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		02DB66A22CFE6A6E008E0F89 /* UCSB.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = UCSB.plist; sourceTree = "<group>"; };
+		4B4AAA982CF989170090A3F2 /* MealPlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealPlanViewController.swift; sourceTree = "<group>"; };
+		4B4AAA9A2CF991F50090A3F2 /* DiningAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiningAPIClient.swift; sourceTree = "<group>"; };
+		4B4AAAA22CFAEBAA0090A3F2 /* GeminiAPI.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = GeminiAPI.plist; sourceTree = "<group>"; };
+		4B4AAAA62CFAEBC90090A3F2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6201F1FC2CC58A3D00E1BAEB /* PhoneAuth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhoneAuth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6201F1FF2CC58A3D00E1BAEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6201F2012CC58A3D00E1BAEB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -128,6 +138,8 @@
 			isa = PBXGroup;
 			children = (
 				C2DFA7B12CF555C700854B1D /* AIController.swift */,
+				4B4AAA982CF989170090A3F2 /* MealPlanViewController.swift */,
+				4B4AAA9A2CF991F50090A3F2 /* DiningAPIClient.swift */,
 				625658592CEC25E400576A6E /* ForecastView.swift */,
 				625658572CEC25B800576A6E /* HistogramView.swift */,
 				625658532CEBF5F600576A6E /* ForeCastController.swift */,
@@ -281,6 +293,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B4AAA992CF989250090A3F2 /* MealPlanViewController.swift in Sources */,
 				625658582CEC25C200576A6E /* HistogramView.swift in Sources */,
 				6201F2042CC58A3D00E1BAEB /* PhoneViewController.swift in Sources */,
 				622D19582CC753F100D9C2D1 /* MainViewController.swift .swift in Sources */,
@@ -289,6 +302,7 @@
 				62E712292CC58B080064CBF4 /* AuthManager.swift in Sources */,
 				625658542CEBF67500576A6E /* ForeCastController.swift in Sources */,
 				6201F2002CC58A3D00E1BAEB /* AppDelegate.swift in Sources */,
+				4B4AAA9B2CF992020090A3F2 /* DiningAPIClient.swift in Sources */,
 				6201F2022CC58A3D00E1BAEB /* SceneDelegate.swift in Sources */,
 				622D195A2CC7547E00D9C2D1 /* LogoutViewController.swift in Sources */,
 				C26487F12CD8301100ACC29B /* BusyLevelModel.swift in Sources */,
