@@ -21,9 +21,11 @@ class MainViewController: UITabBarController {
         let forecastVC = ForeCastController()
         forecastVC.tabBarItem = UITabBarItem(title: "Forecast", image: UIImage(systemName: "figure.walk.circle"), tag: 3)
         
+        let idVC = IDController()
+                idVC.tabBarItem = UITabBarItem(title: "ID", image: UIImage(systemName: "widget.medium"), tag: 4)
         
         
-        viewControllers = [homeVC, forecastVC, aiVC, logoutVC]
+        viewControllers = [homeVC, forecastVC, aiVC, idVC, logoutVC]
         
         // Customize tab bar appearance
         tabBar.tintColor = .white
