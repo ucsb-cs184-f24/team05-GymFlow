@@ -199,7 +199,8 @@ class MealPlanViewController: UIViewController {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
         let today = dateFormatter.string(from: Date())
-        //let today = "2024-11-22"
+        //let today = "2024-12-1"
+        print(today)
         // Show loading indicator
         
         
@@ -223,7 +224,7 @@ class MealPlanViewController: UIViewController {
                     }
                     
                 case .failure(let error):
-                    self.resultLabel.text = "Error: \(error.localizedDescription)"
+                    self.resultLabel.text = "Error: Dining commons are closed/Wrong timing. If you are looking for brunch, click breakfast"
                     self.activityIndicator.stopAnimating()
                     
                 }
@@ -240,10 +241,10 @@ private func fetchFoodPrompt(for action: String, generativeModel: GenerativeMode
     Task {
         do {
             let response = try await generativeModel.generateContent(prompt)
-            if let workoutText = response.text {
-                completion(true, workoutText)
+            if let foodText = response.text {
+                completion(true, foodText)
             } else {
-                completion(false, "Failed to receive a valid workout prompt.")
+                completion(false, "Failed to receive a valid workout food prompt.")
             }
         } catch {
             completion(false, "Error generating Food prompt: \(error.localizedDescription)")

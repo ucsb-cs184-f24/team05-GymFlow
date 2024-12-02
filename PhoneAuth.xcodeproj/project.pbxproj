@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4B4AAA972CF987460090A3F2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B4AAA962CF987460090A3F2 /* GoogleService-Info.plist */; };
 		4B4AAA992CF989250090A3F2 /* MealPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4AAA982CF989170090A3F2 /* MealPlanViewController.swift */; };
 		4B4AAA9B2CF992020090A3F2 /* DiningAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4AAA9A2CF991F50090A3F2 /* DiningAPIClient.swift */; };
-		4B4AAA9D2CFAA16A0090A3F2 /* GeminiAPI.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B4AAA9C2CFAA16A0090A3F2 /* GeminiAPI.plist */; };
+		4B4AAAA32CFAEBAA0090A3F2 /* GeminiAPI.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B4AAAA22CFAEBAA0090A3F2 /* GeminiAPI.plist */; };
+		4B4AAAA72CFAEBC90090A3F2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B4AAAA62CFAEBC90090A3F2 /* GoogleService-Info.plist */; };
+		4B4AAAA92CFAEDBE0090A3F2 /* UCSB.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B4AAAA82CFAEDBE0090A3F2 /* UCSB.plist */; };
 		6201F2002CC58A3D00E1BAEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6201F1FF2CC58A3D00E1BAEB /* AppDelegate.swift */; };
 		6201F2022CC58A3D00E1BAEB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6201F2012CC58A3D00E1BAEB /* SceneDelegate.swift */; };
 		6201F2042CC58A3D00E1BAEB /* PhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6201F2032CC58A3D00E1BAEB /* PhoneViewController.swift */; };
@@ -48,10 +49,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		4B4AAA962CF987460090A3F2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4B4AAA982CF989170090A3F2 /* MealPlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealPlanViewController.swift; sourceTree = "<group>"; };
 		4B4AAA9A2CF991F50090A3F2 /* DiningAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiningAPIClient.swift; sourceTree = "<group>"; };
-		4B4AAA9C2CFAA16A0090A3F2 /* GeminiAPI.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = GeminiAPI.plist; sourceTree = "<group>"; };
+		4B4AAAA22CFAEBAA0090A3F2 /* GeminiAPI.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = GeminiAPI.plist; sourceTree = "<group>"; };
+		4B4AAAA62CFAEBC90090A3F2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4B4AAAA82CFAEDBE0090A3F2 /* UCSB.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = UCSB.plist; sourceTree = "<group>"; };
 		6201F1FC2CC58A3D00E1BAEB /* PhoneAuth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhoneAuth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6201F1FF2CC58A3D00E1BAEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6201F2012CC58A3D00E1BAEB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,9 +120,10 @@
 				6201F2012CC58A3D00E1BAEB /* SceneDelegate.swift */,
 				6201F2082CC58A3E00E1BAEB /* Assets.xcassets */,
 				6201F20A2CC58A3E00E1BAEB /* LaunchScreen.storyboard */,
-				4B4AAA9C2CFAA16A0090A3F2 /* GeminiAPI.plist */,
+				4B4AAAA22CFAEBAA0090A3F2 /* GeminiAPI.plist */,
+				4B4AAAA62CFAEBC90090A3F2 /* GoogleService-Info.plist */,
+				4B4AAAA82CFAEDBE0090A3F2 /* UCSB.plist */,
 				6201F20D2CC58A3E00E1BAEB /* Info.plist */,
-				4B4AAA962CF987460090A3F2 /* GoogleService-Info.plist */,
 			);
 			path = PhoneAuth;
 			sourceTree = "<group>";
@@ -227,10 +230,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B4AAA9D2CFAA16A0090A3F2 /* GeminiAPI.plist in Resources */,
+				4B4AAAA92CFAEDBE0090A3F2 /* UCSB.plist in Resources */,
 				6201F2092CC58A3E00E1BAEB /* Assets.xcassets in Resources */,
+				4B4AAAA72CFAEBC90090A3F2 /* GoogleService-Info.plist in Resources */,
+				4B4AAAA32CFAEBAA0090A3F2 /* GeminiAPI.plist in Resources */,
 				6201F20C2CC58A3E00E1BAEB /* Base in Resources */,
-				4B4AAA972CF987460090A3F2 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
