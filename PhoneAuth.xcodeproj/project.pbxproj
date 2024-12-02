@@ -18,9 +18,11 @@
 		625658562CEC259A00576A6E /* ForecastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625658552CEC258B00576A6E /* ForecastModel.swift */; };
 		625658582CEC25C200576A6E /* HistogramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625658572CEC25B800576A6E /* HistogramView.swift */; };
 		6256585A2CEC25E900576A6E /* ForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625658592CEC25E400576A6E /* ForecastView.swift */; };
-		6256585E2CEEA39600576A6E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6256585D2CEEA39600576A6E /* GoogleService-Info.plist */; };
 		6259ECF42CC5927200EC973F /* Pods_PhoneAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C872189BD874C04C50040EA8 /* Pods_PhoneAuth.framework */; };
 		6259ECF52CC5927200EC973F /* Pods_PhoneAuth.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C872189BD874C04C50040EA8 /* Pods_PhoneAuth.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		62D005652CFE71A7002AF9A9 /* UCSB.plist in Resources */ = {isa = PBXBuildFile; fileRef = 62D005632CFE71A7002AF9A9 /* UCSB.plist */; };
+		62D005662CFE71A7002AF9A9 /* GeminiAPI.plist in Resources */ = {isa = PBXBuildFile; fileRef = 62D005642CFE71A7002AF9A9 /* GeminiAPI.plist */; };
+		62D005682CFE71B4002AF9A9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 62D005672CFE71B4002AF9A9 /* GoogleService-Info.plist */; };
 		62E712292CC58B080064CBF4 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E712282CC58B080064CBF4 /* AuthManager.swift */; };
 		62E7122C2CC58CDB0064CBF4 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E7122B2CC58CDB0064CBF4 /* AccountViewController.swift */; };
 		62E7122E2CC58CE60064CBF4 /* SMSCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E7122D2CC58CE60064CBF4 /* SMSCodeViewController.swift */; };
@@ -28,7 +30,6 @@
 		C26487F12CD8301100ACC29B /* BusyLevelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26487F02CD8301100ACC29B /* BusyLevelModel.swift */; };
 		C2DFA7B22CF555CC00854B1D /* AIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DFA7B12CF555C700854B1D /* AIController.swift */; };
 		C2DFA7B52CF55D0E00854B1D /* GoogleGenerativeAI in Frameworks */ = {isa = PBXBuildFile; productRef = C2DFA7B42CF55D0E00854B1D /* GoogleGenerativeAI */; };
-		C2DFA7B82CF55E2D00854B1D /* GeminiAPI.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2DFA7B72CF55E2200854B1D /* GeminiAPI.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -60,14 +61,15 @@
 		625658552CEC258B00576A6E /* ForecastModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastModel.swift; sourceTree = "<group>"; };
 		625658572CEC25B800576A6E /* HistogramView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistogramView.swift; sourceTree = "<group>"; };
 		625658592CEC25E400576A6E /* ForecastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastView.swift; sourceTree = "<group>"; };
-		6256585D2CEEA39600576A6E /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		62D005632CFE71A7002AF9A9 /* UCSB.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = UCSB.plist; path = ../../../Downloads/UCSB.plist; sourceTree = "<group>"; };
+		62D005642CFE71A7002AF9A9 /* GeminiAPI.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = GeminiAPI.plist; path = ../../../Downloads/GeminiAPI.plist; sourceTree = "<group>"; };
+		62D005672CFE71B4002AF9A9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		62E712282CC58B080064CBF4 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		62E7122B2CC58CDB0064CBF4 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		62E7122D2CC58CE60064CBF4 /* SMSCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMSCodeViewController.swift; sourceTree = "<group>"; };
 		C26487EC2CD82A2A00ACC29B /* BusyLevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusyLevelView.swift; sourceTree = "<group>"; };
 		C26487F02CD8301100ACC29B /* BusyLevelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusyLevelModel.swift; sourceTree = "<group>"; };
 		C2DFA7B12CF555C700854B1D /* AIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIController.swift; sourceTree = "<group>"; };
-		C2DFA7B72CF55E2200854B1D /* GeminiAPI.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = GeminiAPI.plist; sourceTree = "<group>"; };
 		C872189BD874C04C50040EA8 /* Pods_PhoneAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhoneAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD26FBF4FBA55DA926CFB487 /* Pods-PhoneAuth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhoneAuth.release.xcconfig"; path = "Target Support Files/Pods-PhoneAuth/Pods-PhoneAuth.release.xcconfig"; sourceTree = "<group>"; };
 		CEBC77F7877D358FC0823B5C /* Pods-PhoneAuth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhoneAuth.debug.xcconfig"; path = "Target Support Files/Pods-PhoneAuth/Pods-PhoneAuth.debug.xcconfig"; sourceTree = "<group>"; };
@@ -107,7 +109,6 @@
 		6201F1FE2CC58A3D00E1BAEB /* PhoneAuth */ = {
 			isa = PBXGroup;
 			children = (
-				C2DFA7B72CF55E2200854B1D /* GeminiAPI.plist */,
 				62075E402CC6BF7700C0C0B1 /* PhoneAuth.entitlements */,
 				62E7122A2CC58CAC0064CBF4 /* Controllers */,
 				6201F1FF2CC58A3D00E1BAEB /* AppDelegate.swift */,
@@ -115,8 +116,10 @@
 				6201F2012CC58A3D00E1BAEB /* SceneDelegate.swift */,
 				6201F2082CC58A3E00E1BAEB /* Assets.xcassets */,
 				6201F20A2CC58A3E00E1BAEB /* LaunchScreen.storyboard */,
+				62D005642CFE71A7002AF9A9 /* GeminiAPI.plist */,
+				62D005632CFE71A7002AF9A9 /* UCSB.plist */,
 				6201F20D2CC58A3E00E1BAEB /* Info.plist */,
-				6256585D2CEEA39600576A6E /* GoogleService-Info.plist */,
+				62D005672CFE71B4002AF9A9 /* GoogleService-Info.plist */,
 			);
 			path = PhoneAuth;
 			sourceTree = "<group>";
@@ -221,10 +224,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2DFA7B82CF55E2D00854B1D /* GeminiAPI.plist in Resources */,
+				62D005662CFE71A7002AF9A9 /* GeminiAPI.plist in Resources */,
 				6201F2092CC58A3E00E1BAEB /* Assets.xcassets in Resources */,
-				6256585E2CEEA39600576A6E /* GoogleService-Info.plist in Resources */,
+				62D005682CFE71B4002AF9A9 /* GoogleService-Info.plist in Resources */,
 				6201F20C2CC58A3E00E1BAEB /* Base in Resources */,
+				62D005652CFE71A7002AF9A9 /* UCSB.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
