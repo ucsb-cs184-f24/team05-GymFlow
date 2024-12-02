@@ -27,6 +27,7 @@ xed .
    [LINK TO SLACK](https://ucsb-cs184-f24.slack.com/archives/C07R095CQ2C/p1732586491382259)
 
 6. Make sure build target is for iPhone simulator (>= 18.0), then press play to run
+7. If you want to deploy the application to your phone (instead of the Xcode simulator), go to Targets, then Info Tab, and at the bottom where you see "Push Notifications", press the trash bin icon to delete "Push Notifications". Sign into your Apple dev account and yourself as the team in Signing & Capabilities. Go to your phone's General settings -> VPN & Device Management -> Your dev account -> Allow.
 
 # team05-GymFlow
 
