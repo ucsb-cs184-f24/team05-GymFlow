@@ -199,11 +199,8 @@ class MealPlanViewController: UIViewController {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
         let today = dateFormatter.string(from: Date())
-        //let today = "2024-12-1"
-        print(today)
+
         // Show loading indicator
-        
-        
         DiningAPIClient.shared.getMenu(date: today, diningCommonCode: diningCommonCode, mealCode: mealCode) { result in
             DispatchQueue.main.async {
                 switch result {
@@ -224,9 +221,19 @@ class MealPlanViewController: UIViewController {
                     }
                     
                 case .failure(let error):
-                    self.resultLabel.text = "Error: Dining commons are closed/Wrong timing. If you are looking for brunch, click breakfast"
-                    self.activityIndicator.stopAnimating()
-                    
+                    let today = Date()
+                    let todayString = dateFormatter.string(from: today)
+                    let calendar = Calendar.current
+                    let components = calendar.component(.weekday, from: today)
+                    let isWeekend = components == 1 || components == 7
+
+                    if isWeekend && mealCode == "lunch" {
+                        self.showPopup(message: "If you are looking for brunch, select breakfast")
+                        self.activityIndicator.stopAnimating()
+                    } else {
+                        self.showPopup(message: "Error: Dining commons are closed")
+                        self.activityIndicator.stopAnimating()
+                    }
                 }
             }
         }
