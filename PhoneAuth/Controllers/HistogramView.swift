@@ -26,7 +26,7 @@ struct HistogramView: View {
                             // Create a rectangle based on normalized intensity
                             Rectangle()
                                 .fill(LinearGradient(
-                                    gradient: Gradient(colors: [Color.blue, Color.purple]),
+                                    gradient: Gradient(colors: [Color.red, Color.green]),
                                     startPoint: .top,
                                     endPoint: .bottom
                                 ))
