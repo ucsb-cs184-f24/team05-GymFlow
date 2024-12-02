@@ -25,6 +25,9 @@
 		6256585A2CEC25E900576A6E /* ForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625658592CEC25E400576A6E /* ForecastView.swift */; };
 		6259ECF42CC5927200EC973F /* Pods_PhoneAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C872189BD874C04C50040EA8 /* Pods_PhoneAuth.framework */; };
 		6259ECF52CC5927200EC973F /* Pods_PhoneAuth.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C872189BD874C04C50040EA8 /* Pods_PhoneAuth.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		62D005652CFE71A7002AF9A9 /* UCSB.plist in Resources */ = {isa = PBXBuildFile; fileRef = 62D005632CFE71A7002AF9A9 /* UCSB.plist */; };
+		62D005662CFE71A7002AF9A9 /* GeminiAPI.plist in Resources */ = {isa = PBXBuildFile; fileRef = 62D005642CFE71A7002AF9A9 /* GeminiAPI.plist */; };
+		62D005682CFE71B4002AF9A9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 62D005672CFE71B4002AF9A9 /* GoogleService-Info.plist */; };
 		62E712292CC58B080064CBF4 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E712282CC58B080064CBF4 /* AuthManager.swift */; };
 		62E7122C2CC58CDB0064CBF4 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E7122B2CC58CDB0064CBF4 /* AccountViewController.swift */; };
 		62E7122E2CC58CE60064CBF4 /* SMSCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E7122D2CC58CE60064CBF4 /* SMSCodeViewController.swift */; };
@@ -68,6 +71,9 @@
 		625658552CEC258B00576A6E /* ForecastModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastModel.swift; sourceTree = "<group>"; };
 		625658572CEC25B800576A6E /* HistogramView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistogramView.swift; sourceTree = "<group>"; };
 		625658592CEC25E400576A6E /* ForecastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastView.swift; sourceTree = "<group>"; };
+		62D005632CFE71A7002AF9A9 /* UCSB.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = UCSB.plist; path = ../../../Downloads/UCSB.plist; sourceTree = "<group>"; };
+		62D005642CFE71A7002AF9A9 /* GeminiAPI.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = GeminiAPI.plist; path = ../../../Downloads/GeminiAPI.plist; sourceTree = "<group>"; };
+		62D005672CFE71B4002AF9A9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		62E712282CC58B080064CBF4 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		62E7122B2CC58CDB0064CBF4 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		62E7122D2CC58CE60064CBF4 /* SMSCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMSCodeViewController.swift; sourceTree = "<group>"; };
@@ -120,10 +126,10 @@
 				6201F2012CC58A3D00E1BAEB /* SceneDelegate.swift */,
 				6201F2082CC58A3E00E1BAEB /* Assets.xcassets */,
 				6201F20A2CC58A3E00E1BAEB /* LaunchScreen.storyboard */,
-				4B4AAAA22CFAEBAA0090A3F2 /* GeminiAPI.plist */,
-				02DB66A22CFE6A6E008E0F89 /* UCSB.plist */,
-				4B4AAAA62CFAEBC90090A3F2 /* GoogleService-Info.plist */,
+				62D005642CFE71A7002AF9A9 /* GeminiAPI.plist */,
+				62D005632CFE71A7002AF9A9 /* UCSB.plist */,
 				6201F20D2CC58A3E00E1BAEB /* Info.plist */,
+				62D005672CFE71B4002AF9A9 /* GoogleService-Info.plist */,
 			);
 			path = PhoneAuth;
 			sourceTree = "<group>";
@@ -230,11 +236,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02DB66A32CFE6A6E008E0F89 /* UCSB.plist in Resources */,
+				62D005662CFE71A7002AF9A9 /* GeminiAPI.plist in Resources */,
 				6201F2092CC58A3E00E1BAEB /* Assets.xcassets in Resources */,
-				4B4AAAA72CFAEBC90090A3F2 /* GoogleService-Info.plist in Resources */,
-				4B4AAAA32CFAEBAA0090A3F2 /* GeminiAPI.plist in Resources */,
+				62D005682CFE71B4002AF9A9 /* GoogleService-Info.plist in Resources */,
 				6201F20C2CC58A3E00E1BAEB /* Base in Resources */,
+				62D005652CFE71A7002AF9A9 /* UCSB.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

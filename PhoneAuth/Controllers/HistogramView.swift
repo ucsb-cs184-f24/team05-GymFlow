@@ -4,24 +4,36 @@ struct HistogramView: View {
     var data: [HourAnalysis]
     
     var body: some View {
-        let maxIntensity = data.map { $0.intensityNr }.max() ?? 1
-        
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(alignment: .bottom, spacing: 16) {
                 ForEach(data, id: \.hour) { entry in
                     VStack {
-                        Text(String(format: "%.0f%%", (Double(entry.intensityNr) / Double(maxIntensity)) * 100))
-                            .font(.caption2)
-                            .foregroundColor(.white)
+                        // Handle "Closed" case (999) and adjust intensity
+                        if entry.intensityNr == 999 {
+                            Text("Closed")
+                                .font(.caption2)
+                                .foregroundColor(.red)
+                        } else {
+                            // Normalize intensity
+                            let adjustedIntensity = max(0, Double(entry.intensityNr) + 2) // Shift range [-2, 2] to [0, 4]
+                            let percentage = (adjustedIntensity / 4.0) * 100 // Normalize to percentage [0, 100]
+                            
+                            // Display percentage
+                            Text(String(format: "%.0f%%", percentage))
+                                .font(.caption2)
+                                .foregroundColor(.white)
+                            
+                            // Create a rectangle based on normalized intensity
+                            Rectangle()
+                                .fill(LinearGradient(
+                                    gradient: Gradient(colors: [Color.red, Color.green]),
+                                    startPoint: .top,
+                                    endPoint: .bottom
+                                ))
+                                .frame(width: 24, height: CGFloat(adjustedIntensity) * 50) // Scale height appropriately
+                        }
                         
-                        Rectangle()
-                            .fill(LinearGradient(
-                                gradient: Gradient(colors: [Color.blue, Color.purple]),
-                                startPoint: .top,
-                                endPoint: .bottom
-                            ))
-                            .frame(width: 24, height: CGFloat(entry.intensityNr) * 200 / CGFloat(maxIntensity))
-                        
+                        // Display hour
                         Text(formatHour(entry.hour))
                             .font(.caption2)
                             .foregroundColor(.white)
@@ -41,4 +53,5 @@ struct HistogramView: View {
         else { return "\(hour - 12) PM" }
     }
 }
+
 
