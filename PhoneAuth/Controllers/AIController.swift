@@ -112,53 +112,6 @@ class AIController: UIViewController {
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40)
         ])
     }
-
-    
-//    private func setupButtons() {
-//        let buttonTitles = ["Push", "Pull", "Legs", "Cardio", "Meal Plan"]
-//                let stackView = UIStackView()
-//                stackView.axis = .vertical
-//                stackView.distribution = .fillEqually
-//                stackView.alignment = .fill
-//                stackView.spacing = 20
-//                
-//                for title in buttonTitles {
-//                    let button = UIButton(type: .system)
-//                    button.setTitle(title, for: .normal)
-//                    button.setTitleColor(.white, for: .normal)
-//                    button.backgroundColor = title == "Meal Plan" ? .systemOrange : .systemBlue
-//                    button.layer.cornerRadius = 10
-//                    button.addTarget(self, action: #selector(buttonTapped(_:)), for: .touchUpInside)
-//                    
-//                    button.heightAnchor.constraint(equalToConstant: 60).isActive = true
-//                    
-//                    stackView.addArrangedSubview(button)
-//                }
-//        
-//        // The "Show Workout" button will be added dynamically later
-//        let showWorkoutButton = UIButton(type: .system)
-//        showWorkoutButton.setTitle("Show Workout", for: .normal)
-//        showWorkoutButton.setTitleColor(.white, for: .normal)
-//        showWorkoutButton.backgroundColor = .systemGreen
-//        showWorkoutButton.layer.cornerRadius = 10
-//        showWorkoutButton.addTarget(self, action: #selector(showWorkoutButtonTapped), for: .touchUpInside)
-//        showWorkoutButton.isHidden = true // Initially hidden
-//        
-//        stackView.addArrangedSubview(showWorkoutButton)
-//        
-//        // Save reference to the button to update its state later
-//        self.showWorkoutButton = showWorkoutButton
-//        
-//        stackView.translatesAutoresizingMaskIntoConstraints = false
-//        view.addSubview(stackView)
-//        
-//        NSLayoutConstraint.activate([
-//            stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-//            stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-//            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
-//            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40)
-//        ])
-//    }
     
     @objc private func buttonTapped(_ sender: UIButton) {
         guard let title = sender.titleLabel?.text else { return }
