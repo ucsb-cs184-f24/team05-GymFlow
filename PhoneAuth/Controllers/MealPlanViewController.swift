@@ -102,6 +102,20 @@ class MealPlanViewController: UIViewController {
     private func setupMealTypeSegmentedControl() {
         mealTypeSegmentedControl.selectedSegmentIndex = 0
         
+        mealTypeSegmentedControl.tintColor = UIColor.systemBlue
+        mealTypeSegmentedControl.backgroundColor = UIColor.white
+        
+        let font = UIFont.systemFont(ofSize: 20, weight: .medium)
+        mealTypeSegmentedControl.setTitleTextAttributes([.font: font], for: .normal)
+        mealTypeSegmentedControl.setTitleTextAttributes([.font: font], for: .selected)
+        
+        mealTypeSegmentedControl.layer.cornerRadius = 10
+        mealTypeSegmentedControl.layer.masksToBounds = true
+        
+        mealTypeSegmentedControl.selectedSegmentTintColor = .systemBlue
+        mealTypeSegmentedControl.setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
+        mealTypeSegmentedControl.setTitleTextAttributes([.foregroundColor: UIColor.darkGray], for: .normal)
+        
         view.addSubview(mealTypeSegmentedControl)
         mealTypeSegmentedControl.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -117,10 +131,11 @@ class MealPlanViewController: UIViewController {
         
         view.addSubview(diningHallPicker)
         diningHallPicker.translatesAutoresizingMaskIntoConstraints = false
+        
         NSLayoutConstraint.activate([
             diningHallPicker.topAnchor.constraint(equalTo: mealTypeSegmentedControl.bottomAnchor, constant: 20),
-            diningHallPicker.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            diningHallPicker.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            diningHallPicker.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
+            diningHallPicker.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
             diningHallPicker.heightAnchor.constraint(equalToConstant: 150)
         ])
     }
@@ -222,7 +237,6 @@ class MealPlanViewController: UIViewController {
                     
                 case .failure(let error):
                     let today = Date()
-                    let todayString = dateFormatter.string(from: today)
                     let calendar = Calendar.current
                     let components = calendar.component(.weekday, from: today)
                     let isWeekend = components == 1 || components == 7
@@ -241,10 +255,8 @@ class MealPlanViewController: UIViewController {
     }
 }
 private func fetchFoodPrompt(for action: String, generativeModel: GenerativeModel, completion: @escaping (Bool, String) -> Void) {
-    // Construct the prompt based on the action
-    let prompt = "Which of these foods would be good for someone working out \(action.lowercased()). Max 1000 characters, give some reasoning"
+    let prompt = "Given this list of foods can you create a balanced meal that would be good for someone working out \(action.lowercased()). Max 1000 characters, give some reasoning"
     
-    // Use the GenerativeModel to fetch the workout prompt
     Task {
         do {
             let response = try await generativeModel.generateContent(prompt)
@@ -271,5 +283,17 @@ extension MealPlanViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return diningHalls[row]
     }
+    
+    func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
+        return 40
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        let title = diningHalls[row]
+        let attributes: [NSAttributedString.Key: Any] = [
+            .font: UIFont.systemFont(ofSize: 18, weight: .medium), // Change the font and size
+            .foregroundColor: UIColor.black // Change the text color
+        ]
+        return NSAttributedString(string: title, attributes: attributes)
+    }
 }
-

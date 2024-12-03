@@ -12,14 +12,33 @@ class AIController: UIViewController {
     // Reference to the "Show Workout" button, initially nil
     var showWorkoutButton: UIButton?
     
+    var titleLabel: UILabel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        setupTitleLabel()
         setupButtons()
         
         // Load the API key and initialize the GenerativeModel after viewDidLoad
         initializeGenerativeModel()
     }
+    
+    private func setupTitleLabel() {
+            let titleLabel = UILabel()
+            titleLabel.text = "Workout Guide"
+            titleLabel.font = UIFont.systemFont(ofSize: 34, weight: .heavy)  // Increased font size for better visibility
+            titleLabel.textColor = .black  // Added a color to make it stand out
+            titleLabel.textAlignment = .center  // Center the text
+            titleLabel.translatesAutoresizingMaskIntoConstraints = false
+            view.addSubview(titleLabel)
+
+            // Add constraints to position the title with more space from the top
+            NSLayoutConstraint.activate([
+                titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 40),  // Adjusted constant for better spacing
+                titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+            ])
+        }
     
     private func initializeGenerativeModel() {
         // Load the API key from the plist
@@ -37,34 +56,46 @@ class AIController: UIViewController {
     
     private func setupButtons() {
         let buttonTitles = ["Push", "Pull", "Legs", "Cardio", "Meal Plan"]
-                let stackView = UIStackView()
-                stackView.axis = .vertical
-                stackView.distribution = .fillEqually
-                stackView.alignment = .fill
-                stackView.spacing = 20
-                
-                for title in buttonTitles {
-                    let button = UIButton(type: .system)
-                    button.setTitle(title, for: .normal)
-                    button.setTitleColor(.white, for: .normal)
-                    button.backgroundColor = title == "Meal Plan" ? .systemOrange : .systemBlue
-                    button.layer.cornerRadius = 10
-                    button.addTarget(self, action: #selector(buttonTapped(_:)), for: .touchUpInside)
-                    
-                    button.heightAnchor.constraint(equalToConstant: 60).isActive = true
-                    
-                    stackView.addArrangedSubview(button)
-                }
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.distribution = .fillEqually
+        stackView.alignment = .fill
+        stackView.spacing = 20
         
+        // Iterate through the button titles and create buttons
+        for title in buttonTitles {
+            let button = UIButton(type: .system)
+            button.setTitle(title, for: .normal)
+            button.setTitleColor(.white, for: .normal)
+            
+            // Customize button appearance
+            button.backgroundColor = title == "Meal Plan" ? .systemOrange : .systemBlue
+            button.layer.cornerRadius = 30 // More rounded
+            button.layer.masksToBounds = true
+            button.addTarget(self, action: #selector(buttonTapped(_:)), for: .touchUpInside)
+            
+            // Adjust font size and weight
+            button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 24) // Bigger and bolder font
+            
+            // Add padding to the button
+            button.contentEdgeInsets = UIEdgeInsets(top: 10, left: 20, bottom: 10, right: 20)
+            
+            // Set fixed height for buttons
+            button.heightAnchor.constraint(equalToConstant: 60).isActive = true
+            
+            stackView.addArrangedSubview(button)
+        }
+
         // The "Show Workout" button will be added dynamically later
         let showWorkoutButton = UIButton(type: .system)
         showWorkoutButton.setTitle("Show Workout", for: .normal)
         showWorkoutButton.setTitleColor(.white, for: .normal)
         showWorkoutButton.backgroundColor = .systemGreen
-        showWorkoutButton.layer.cornerRadius = 10
+        showWorkoutButton.titleLabel?.font = UIFont.systemFont(ofSize: 24, weight: .bold)
+        showWorkoutButton.layer.cornerRadius = 30 // More rounded
+        showWorkoutButton.layer.masksToBounds = true
         showWorkoutButton.addTarget(self, action: #selector(showWorkoutButtonTapped), for: .touchUpInside)
         showWorkoutButton.isHidden = true // Initially hidden
-        
         stackView.addArrangedSubview(showWorkoutButton)
         
         // Save reference to the button to update its state later
@@ -73,6 +104,7 @@ class AIController: UIViewController {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(stackView)
         
+        // Layout constraints for the stack view
         NSLayoutConstraint.activate([
             stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
@@ -80,6 +112,53 @@ class AIController: UIViewController {
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40)
         ])
     }
+
+    
+//    private func setupButtons() {
+//        let buttonTitles = ["Push", "Pull", "Legs", "Cardio", "Meal Plan"]
+//                let stackView = UIStackView()
+//                stackView.axis = .vertical
+//                stackView.distribution = .fillEqually
+//                stackView.alignment = .fill
+//                stackView.spacing = 20
+//                
+//                for title in buttonTitles {
+//                    let button = UIButton(type: .system)
+//                    button.setTitle(title, for: .normal)
+//                    button.setTitleColor(.white, for: .normal)
+//                    button.backgroundColor = title == "Meal Plan" ? .systemOrange : .systemBlue
+//                    button.layer.cornerRadius = 10
+//                    button.addTarget(self, action: #selector(buttonTapped(_:)), for: .touchUpInside)
+//                    
+//                    button.heightAnchor.constraint(equalToConstant: 60).isActive = true
+//                    
+//                    stackView.addArrangedSubview(button)
+//                }
+//        
+//        // The "Show Workout" button will be added dynamically later
+//        let showWorkoutButton = UIButton(type: .system)
+//        showWorkoutButton.setTitle("Show Workout", for: .normal)
+//        showWorkoutButton.setTitleColor(.white, for: .normal)
+//        showWorkoutButton.backgroundColor = .systemGreen
+//        showWorkoutButton.layer.cornerRadius = 10
+//        showWorkoutButton.addTarget(self, action: #selector(showWorkoutButtonTapped), for: .touchUpInside)
+//        showWorkoutButton.isHidden = true // Initially hidden
+//        
+//        stackView.addArrangedSubview(showWorkoutButton)
+//        
+//        // Save reference to the button to update its state later
+//        self.showWorkoutButton = showWorkoutButton
+//        
+//        stackView.translatesAutoresizingMaskIntoConstraints = false
+//        view.addSubview(stackView)
+//        
+//        NSLayoutConstraint.activate([
+//            stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+//            stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+//            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
+//            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40)
+//        ])
+//    }
     
     @objc private func buttonTapped(_ sender: UIButton) {
         guard let title = sender.titleLabel?.text else { return }

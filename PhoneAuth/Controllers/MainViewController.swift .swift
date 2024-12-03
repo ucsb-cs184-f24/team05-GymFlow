@@ -16,13 +16,13 @@ class MainViewController: UITabBarController {
         // Set view controllers for the tab bar
         
         let aiVC = AIController()
-        aiVC.tabBarItem = UITabBarItem(title: "AI", image: UIImage(systemName: "person.fill"), tag: 2)
+        aiVC.tabBarItem = UITabBarItem(title: "Workouts", image: UIImage(systemName: "person.fill"), tag: 2)
         
         let forecastVC = ForeCastController()
-        forecastVC.tabBarItem = UITabBarItem(title: "Forecast", image: UIImage(systemName: "figure.walk.circle"), tag: 3)
+        forecastVC.tabBarItem = UITabBarItem(title: "Forecast", image: UIImage(systemName: "figure.walk.circle"), tag: 4)
         
         let idVC = IDController()
-                idVC.tabBarItem = UITabBarItem(title: "ID", image: UIImage(systemName: "widget.medium"), tag: 4)
+        idVC.tabBarItem = UITabBarItem(title: "ID", image: UIImage(systemName: "widget.medium"), tag: 5)
         
         
         viewControllers = [homeVC, forecastVC, aiVC, idVC, logoutVC]
