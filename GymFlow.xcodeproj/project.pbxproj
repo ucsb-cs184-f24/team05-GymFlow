@@ -20,16 +20,15 @@
 		625658562CEC259A00576A6E /* ForecastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625658552CEC258B00576A6E /* ForecastModel.swift */; };
 		625658582CEC25C200576A6E /* HistogramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625658572CEC25B800576A6E /* HistogramView.swift */; };
 		6256585A2CEC25E900576A6E /* ForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625658592CEC25E400576A6E /* ForecastView.swift */; };
-		6259ECF42CC5927200EC973F /* Pods_PhoneAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C872189BD874C04C50040EA8 /* Pods_PhoneAuth.framework */; };
-		6259ECF52CC5927200EC973F /* Pods_PhoneAuth.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C872189BD874C04C50040EA8 /* Pods_PhoneAuth.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		62E712292CC58B080064CBF4 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E712282CC58B080064CBF4 /* AuthManager.swift */; };
 		62E7122C2CC58CDB0064CBF4 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E7122B2CC58CDB0064CBF4 /* AccountViewController.swift */; };
 		62E7122E2CC58CE60064CBF4 /* SMSCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E7122D2CC58CE60064CBF4 /* SMSCodeViewController.swift */; };
+		8473C1584BE31AEA7A95CEA1 /* Pods_GymFlow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A334E3E0FCD4F366E849A7 /* Pods_GymFlow.framework */; };
+		C250096D2D0100630012A4CB /* GeminiAPI.plist in Resources */ = {isa = PBXBuildFile; fileRef = C25009692D0100630012A4CB /* GeminiAPI.plist */; };
+		C250096E2D0100630012A4CB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C250096A2D0100630012A4CB /* GoogleService-Info.plist */; };
+		C25009702D0100630012A4CB /* UCSB.plist in Resources */ = {isa = PBXBuildFile; fileRef = C250096C2D0100630012A4CB /* UCSB.plist */; };
 		C26487ED2CD82A2A00ACC29B /* BusyLevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26487EC2CD82A2A00ACC29B /* BusyLevelView.swift */; };
 		C26487F12CD8301100ACC29B /* BusyLevelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26487F02CD8301100ACC29B /* BusyLevelModel.swift */; };
-		C2C7D18C2CFE77A40041E64F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2C7D18A2CFE77A40041E64F /* GoogleService-Info.plist */; };
-		C2C7D18D2CFE77A40041E64F /* UCSB.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2C7D18B2CFE77A40041E64F /* UCSB.plist */; };
-		C2C7D18E2CFE77A40041E64F /* GeminiAPI.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2C7D1892CFE77A40041E64F /* GeminiAPI.plist */; };
 		C2C7D1932CFE77EF0041E64F /* IDModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C7D1912CFE77EF0041E64F /* IDModel.swift */; };
 		C2C7D1942CFE77EF0041E64F /* IDController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C7D1902CFE77EF0041E64F /* IDController.swift */; };
 		C2C7D1952CFE77EF0041E64F /* IDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C7D1922CFE77EF0041E64F /* IDView.swift */; };
@@ -45,7 +44,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				6259ECF52CC5927200EC973F /* Pods_PhoneAuth.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -53,16 +51,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		22D066A39B9CE5682A1C157C /* Pods-GymFlow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymFlow.release.xcconfig"; path = "Target Support Files/Pods-GymFlow/Pods-GymFlow.release.xcconfig"; sourceTree = "<group>"; };
 		4B4AAA982CF989170090A3F2 /* MealPlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealPlanViewController.swift; sourceTree = "<group>"; };
 		4B4AAA9A2CF991F50090A3F2 /* DiningAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiningAPIClient.swift; sourceTree = "<group>"; };
-		6201F1FC2CC58A3D00E1BAEB /* PhoneAuth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhoneAuth.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		57169406B20E8636A3ECF0F2 /* Pods-GymFlow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymFlow.debug.xcconfig"; path = "Target Support Files/Pods-GymFlow/Pods-GymFlow.debug.xcconfig"; sourceTree = "<group>"; };
+		6201F1FC2CC58A3D00E1BAEB /* GymFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GymFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6201F1FF2CC58A3D00E1BAEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6201F2012CC58A3D00E1BAEB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		6201F2032CC58A3D00E1BAEB /* PhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneViewController.swift; sourceTree = "<group>"; };
 		6201F2082CC58A3E00E1BAEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6201F20B2CC58A3E00E1BAEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		6201F20D2CC58A3E00E1BAEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		62075E402CC6BF7700C0C0B1 /* PhoneAuth.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PhoneAuth.entitlements; sourceTree = "<group>"; };
+		62075E402CC6BF7700C0C0B1 /* GymFlow.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GymFlow.entitlements; sourceTree = "<group>"; };
 		622D19572CC753F100D9C2D1 /* MainViewController.swift .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController.swift .swift"; sourceTree = "<group>"; };
 		622D19592CC7547E00D9C2D1 /* LogoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutViewController.swift; sourceTree = "<group>"; };
 		625658532CEBF5F600576A6E /* ForeCastController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForeCastController.swift; sourceTree = "<group>"; };
@@ -72,19 +71,17 @@
 		62E712282CC58B080064CBF4 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		62E7122B2CC58CDB0064CBF4 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		62E7122D2CC58CE60064CBF4 /* SMSCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMSCodeViewController.swift; sourceTree = "<group>"; };
+		84A334E3E0FCD4F366E849A7 /* Pods_GymFlow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GymFlow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C25009692D0100630012A4CB /* GeminiAPI.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = GeminiAPI.plist; sourceTree = "<group>"; };
+		C250096A2D0100630012A4CB /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C250096C2D0100630012A4CB /* UCSB.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = UCSB.plist; sourceTree = "<group>"; };
 		C26487EC2CD82A2A00ACC29B /* BusyLevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusyLevelView.swift; sourceTree = "<group>"; };
 		C26487F02CD8301100ACC29B /* BusyLevelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusyLevelModel.swift; sourceTree = "<group>"; };
-		C2C7D1892CFE77A40041E64F /* GeminiAPI.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = GeminiAPI.plist; sourceTree = "<group>"; };
-		C2C7D18A2CFE77A40041E64F /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		C2C7D18B2CFE77A40041E64F /* UCSB.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = UCSB.plist; sourceTree = "<group>"; };
 		C2C7D18F2CFE77EF0041E64F /* CameraCaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraCaptureView.swift; sourceTree = "<group>"; };
 		C2C7D1902CFE77EF0041E64F /* IDController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDController.swift; sourceTree = "<group>"; };
 		C2C7D1912CFE77EF0041E64F /* IDModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDModel.swift; sourceTree = "<group>"; };
 		C2C7D1922CFE77EF0041E64F /* IDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDView.swift; sourceTree = "<group>"; };
 		C2DFA7B12CF555C700854B1D /* AIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIController.swift; sourceTree = "<group>"; };
-		C872189BD874C04C50040EA8 /* Pods_PhoneAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhoneAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CD26FBF4FBA55DA926CFB487 /* Pods-PhoneAuth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhoneAuth.release.xcconfig"; path = "Target Support Files/Pods-PhoneAuth/Pods-PhoneAuth.release.xcconfig"; sourceTree = "<group>"; };
-		CEBC77F7877D358FC0823B5C /* Pods-PhoneAuth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhoneAuth.debug.xcconfig"; path = "Target Support Files/Pods-PhoneAuth/Pods-PhoneAuth.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,48 +89,55 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6259ECF42CC5927200EC973F /* Pods_PhoneAuth.framework in Frameworks */,
 				C2DFA7B52CF55D0E00854B1D /* GoogleGenerativeAI in Frameworks */,
+				8473C1584BE31AEA7A95CEA1 /* Pods_GymFlow.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		32C729E5AAF4E1A9620DC5DE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				84A334E3E0FCD4F366E849A7 /* Pods_GymFlow.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6201F1F32CC58A3D00E1BAEB = {
 			isa = PBXGroup;
 			children = (
-				6201F1FE2CC58A3D00E1BAEB /* PhoneAuth */,
+				6201F1FE2CC58A3D00E1BAEB /* GymFlow */,
 				6201F1FD2CC58A3D00E1BAEB /* Products */,
 				FB4B4EF55989E200CBEBEBFF /* Pods */,
-				C7BAE0BD17361ACC5C76C6F6 /* Frameworks */,
+				32C729E5AAF4E1A9620DC5DE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		6201F1FD2CC58A3D00E1BAEB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6201F1FC2CC58A3D00E1BAEB /* PhoneAuth.app */,
+				6201F1FC2CC58A3D00E1BAEB /* GymFlow.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6201F1FE2CC58A3D00E1BAEB /* PhoneAuth */ = {
+		6201F1FE2CC58A3D00E1BAEB /* GymFlow */ = {
 			isa = PBXGroup;
 			children = (
-				62075E402CC6BF7700C0C0B1 /* PhoneAuth.entitlements */,
+				62075E402CC6BF7700C0C0B1 /* GymFlow.entitlements */,
 				62E7122A2CC58CAC0064CBF4 /* Controllers */,
 				6201F1FF2CC58A3D00E1BAEB /* AppDelegate.swift */,
 				62E712282CC58B080064CBF4 /* AuthManager.swift */,
 				6201F2012CC58A3D00E1BAEB /* SceneDelegate.swift */,
 				6201F2082CC58A3E00E1BAEB /* Assets.xcassets */,
 				6201F20A2CC58A3E00E1BAEB /* LaunchScreen.storyboard */,
-				6201F20D2CC58A3E00E1BAEB /* Info.plist */,
-				C2C7D1892CFE77A40041E64F /* GeminiAPI.plist */,
-				C2C7D18A2CFE77A40041E64F /* GoogleService-Info.plist */,
-				C2C7D18B2CFE77A40041E64F /* UCSB.plist */,
+				C25009692D0100630012A4CB /* GeminiAPI.plist */,
+				C250096A2D0100630012A4CB /* GoogleService-Info.plist */,
+				C250096C2D0100630012A4CB /* UCSB.plist */,
 			);
-			path = PhoneAuth;
+			path = GymFlow;
 			sourceTree = "<group>";
 		};
 		62E7122A2CC58CAC0064CBF4 /* Controllers */ = {
@@ -161,19 +165,11 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		C7BAE0BD17361ACC5C76C6F6 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				C872189BD874C04C50040EA8 /* Pods_PhoneAuth.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		FB4B4EF55989E200CBEBEBFF /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				CEBC77F7877D358FC0823B5C /* Pods-PhoneAuth.debug.xcconfig */,
-				CD26FBF4FBA55DA926CFB487 /* Pods-PhoneAuth.release.xcconfig */,
+				57169406B20E8636A3ECF0F2 /* Pods-GymFlow.debug.xcconfig */,
+				22D066A39B9CE5682A1C157C /* Pods-GymFlow.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -181,24 +177,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6201F1FB2CC58A3D00E1BAEB /* PhoneAuth */ = {
+		6201F1FB2CC58A3D00E1BAEB /* GymFlow */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6201F2102CC58A3E00E1BAEB /* Build configuration list for PBXNativeTarget "PhoneAuth" */;
+			buildConfigurationList = 6201F2102CC58A3E00E1BAEB /* Build configuration list for PBXNativeTarget "GymFlow" */;
 			buildPhases = (
-				11885715ABECBD20D8453AAB /* [CP] Check Pods Manifest.lock */,
+				82E7AC3928E21771A4D628C7 /* [CP] Check Pods Manifest.lock */,
 				6201F1F82CC58A3D00E1BAEB /* Sources */,
 				6201F1F92CC58A3D00E1BAEB /* Frameworks */,
 				6201F1FA2CC58A3D00E1BAEB /* Resources */,
-				5525E68F882AAD33BF4AA471 /* [CP] Embed Pods Frameworks */,
 				6259ECF62CC5927200EC973F /* Embed Frameworks */,
+				0AC24579E36EDC9B89633C1F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = PhoneAuth;
+			name = GymFlow;
 			productName = PhoneAuth;
-			productReference = 6201F1FC2CC58A3D00E1BAEB /* PhoneAuth.app */;
+			productReference = 6201F1FC2CC58A3D00E1BAEB /* GymFlow.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -216,7 +212,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 6201F1F72CC58A3D00E1BAEB /* Build configuration list for PBXProject "PhoneAuth" */;
+			buildConfigurationList = 6201F1F72CC58A3D00E1BAEB /* Build configuration list for PBXProject "GymFlow" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -232,7 +228,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6201F1FB2CC58A3D00E1BAEB /* PhoneAuth */,
+				6201F1FB2CC58A3D00E1BAEB /* GymFlow */,
 			);
 		};
 /* End PBXProject section */
@@ -242,18 +238,35 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C250096D2D0100630012A4CB /* GeminiAPI.plist in Resources */,
+				C250096E2D0100630012A4CB /* GoogleService-Info.plist in Resources */,
+				C25009702D0100630012A4CB /* UCSB.plist in Resources */,
 				6201F2092CC58A3E00E1BAEB /* Assets.xcassets in Resources */,
 				6201F20C2CC58A3E00E1BAEB /* Base in Resources */,
-				C2C7D18C2CFE77A40041E64F /* GoogleService-Info.plist in Resources */,
-				C2C7D18D2CFE77A40041E64F /* UCSB.plist in Resources */,
-				C2C7D18E2CFE77A40041E64F /* GeminiAPI.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		11885715ABECBD20D8453AAB /* [CP] Check Pods Manifest.lock */ = {
+		0AC24579E36EDC9B89633C1F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GymFlow/Pods-GymFlow-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GymFlow/Pods-GymFlow-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GymFlow/Pods-GymFlow-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		82E7AC3928E21771A4D628C7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -268,28 +281,11 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PhoneAuth-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-GymFlow-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5525E68F882AAD33BF4AA471 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PhoneAuth/Pods-PhoneAuth-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PhoneAuth/Pods-PhoneAuth-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PhoneAuth/Pods-PhoneAuth-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -458,19 +454,22 @@
 		};
 		6201F2112CC58A3E00E1BAEB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CEBC77F7877D358FC0823B5C /* Pods-PhoneAuth.debug.xcconfig */;
+			baseConfigurationReference = 57169406B20E8636A3ECF0F2 /* Pods-GymFlow.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = PhoneAuth/PhoneAuth.entitlements;
+				CODE_SIGN_ENTITLEMENTS = GymFlow/GymFlow.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = R2FTZ5HQ3Y;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PhoneAuth/Info.plist;
+				INFOPLIST_FILE = GymFlow/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need access to your camera";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arm64;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
@@ -479,7 +478,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = team05.PhoneAuth;
+				PRODUCT_BUNDLE_IDENTIFIER = team05.GymFlow1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -489,19 +488,22 @@
 		};
 		6201F2122CC58A3E00E1BAEB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CD26FBF4FBA55DA926CFB487 /* Pods-PhoneAuth.release.xcconfig */;
+			baseConfigurationReference = 22D066A39B9CE5682A1C157C /* Pods-GymFlow.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = PhoneAuth/PhoneAuth.entitlements;
+				CODE_SIGN_ENTITLEMENTS = GymFlow/GymFlow.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = R2FTZ5HQ3Y;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PhoneAuth/Info.plist;
+				INFOPLIST_FILE = GymFlow/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need access to your camera";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arm64;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
@@ -510,7 +512,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = team05.PhoneAuth;
+				PRODUCT_BUNDLE_IDENTIFIER = team05.GymFlow1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -521,7 +523,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6201F1F72CC58A3D00E1BAEB /* Build configuration list for PBXProject "PhoneAuth" */ = {
+		6201F1F72CC58A3D00E1BAEB /* Build configuration list for PBXProject "GymFlow" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6201F20E2CC58A3E00E1BAEB /* Debug */,
@@ -530,7 +532,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6201F2102CC58A3E00E1BAEB /* Build configuration list for PBXNativeTarget "PhoneAuth" */ = {
+		6201F2102CC58A3E00E1BAEB /* Build configuration list for PBXNativeTarget "GymFlow" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6201F2112CC58A3E00E1BAEB /* Debug */,

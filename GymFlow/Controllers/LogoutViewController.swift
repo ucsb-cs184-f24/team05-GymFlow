@@ -15,8 +15,11 @@ class LogoutViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBlue
         
+        // Set the background color to #4975F9
+        view.backgroundColor = UIColor(red: 73/255, green: 117/255, blue: 249/255, alpha: 1.0) // #4975F9
+        
+        // Add the logout button
         view.addSubview(logOutButton)
         
         NSLayoutConstraint.activate([

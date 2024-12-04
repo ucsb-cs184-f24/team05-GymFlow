@@ -3,7 +3,8 @@
 1. Clone
 
 ```
-git@github.com:ucsb-cs184-f24/team05-GymFlow.git
+git clone git@github.com:ucsb-cs184-f24/team05-GymFlow.git
+cd team05-GymFlow
 ```
 
 2. Make sure on main branch
@@ -12,24 +13,31 @@ git@github.com:ucsb-cs184-f24/team05-GymFlow.git
 git branch
 ```
 
-3. Open Xcode (Make sure Version >= 16.1)
+3. Run pod install
+```
+pod install
+```
+
+4. Open Xcode (Make sure Version >= 16.1)
 
 ```
 xed .
 ``` 
 
-4. Get Google plist credentials on Slack, then replace the one in PhoneAuth in Xcode
+5. Get Google plist credentials on Slack, then replace the one in PhoneAuth in Xcode
 
    Make sure to delete the original one. Only the one from Slack should exist. (Drag the file into Xcode to replace)
    [LINK TO SLACK](https://ucsb-cs184-f24.slack.com/files/U07PH3AMD1S/F07TNUEDCFQ/googleservice-info.plist)
 
-5. Get GeminiAPI plist on Slack. Drag into PhoneAuth.
+6. Get GeminiAPI plist on Slack. Drag into PhoneAuth.
    [LINK TO SLACK](https://ucsb-cs184-f24.slack.com/archives/C07R095CQ2C/p1732586491382259)
-6. Get UCSB plist on Slack. Drag into PhoneAuth.
-   [LINK TO SLACK]([https://ucsb-cs184-f24.slack.com/archives/C07R095CQ2C/p1732586491382259](https://ucsb-cs184-f24.slack.com/files/U07PDMYDJBY/F082W4NELFQ/ucsb.plist))
 
-7. Make sure build target is for iPhone simulator (>= 18.0), then press play to run
-8. If you want to deploy the application to your phone (instead of the Xcode simulator), go to Targets, then Info Tab, and at the bottom where you see "Push Notifications", press the trash bin icon to delete "Push Notifications". Sign into your Apple dev account and make yourself as the team in Signing & Capabilities. You might need to change bundle identifier to a different unique string. Do not allow notifications when it asks for permissions. Go to your phone's General settings -> VPN & Device Management -> Your dev account -> Allow.
+8. Get UCSB plist on Slack. Drag into PhoneAuth.
+   [LINK TO SLACK](https://ucsb-cs184-f24.slack.com/files/U07PDMYDJBY/F082W4NELFQ/ucsb.plist)
+
+9. Make sure build target is for iPhone simulator (>= 18.0), then press play to run
+
+10. If you want to deploy the application to your phone (instead of the Xcode simulator), go to Targets, then Info Tab, and at the bottom where you see "Push Notifications", press the trash bin icon to delete "Push Notifications". Sign into your Apple dev account and make yourself as the team in Signing & Capabilities. You might need to change bundle identifier to a different unique string. Do not allow notifications when it asks for permissions. Go to your phone's General settings -> VPN & Device Management -> Your dev account -> Allow. Make sure build target is your physically connected phone.
 
 # team05-GymFlow
 

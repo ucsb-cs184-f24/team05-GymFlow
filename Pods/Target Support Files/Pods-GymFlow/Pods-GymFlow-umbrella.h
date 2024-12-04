@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_PhoneAuthVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_PhoneAuthVersionString[];
+FOUNDATION_EXPORT double Pods_GymFlowVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_GymFlowVersionString[];
 
