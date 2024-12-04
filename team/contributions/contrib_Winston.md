@@ -1,0 +1,1 @@
+I worked on the initial logo design as well as built the feature that allows the user to take a picture of their ID and store it on the app to use to scan in at the Recreation Center. I also did extensive testing and debugging.
