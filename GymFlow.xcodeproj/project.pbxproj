@@ -14,11 +14,8 @@
 		6201F2042CC58A3D00E1BAEB /* PhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6201F2032CC58A3D00E1BAEB /* PhoneViewController.swift */; };
 		6201F2092CC58A3E00E1BAEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6201F2082CC58A3E00E1BAEB /* Assets.xcassets */; };
 		6201F20C2CC58A3E00E1BAEB /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 6201F20B2CC58A3E00E1BAEB /* Base */; };
-		622802E72D00EFF8003F999A /* GeminiAPI.plist in Resources */ = {isa = PBXBuildFile; fileRef = 622802E62D00EFF8003F999A /* GeminiAPI.plist */; };
 		622D19582CC753F100D9C2D1 /* MainViewController.swift .swift in Sources */ = {isa = PBXBuildFile; fileRef = 622D19572CC753F100D9C2D1 /* MainViewController.swift .swift */; };
 		622D195A2CC7547E00D9C2D1 /* LogoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622D19592CC7547E00D9C2D1 /* LogoutViewController.swift */; };
-		62403FDA2D00EBF90049A27E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 62403FD92D00EBF90049A27E /* GoogleService-Info.plist */; };
-		62403FDE2D00EC270049A27E /* UCSB.plist in Resources */ = {isa = PBXBuildFile; fileRef = 62403FDC2D00EC270049A27E /* UCSB.plist */; };
 		625658542CEBF67500576A6E /* ForeCastController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625658532CEBF5F600576A6E /* ForeCastController.swift */; };
 		625658562CEC259A00576A6E /* ForecastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625658552CEC258B00576A6E /* ForecastModel.swift */; };
 		625658582CEC25C200576A6E /* HistogramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625658572CEC25B800576A6E /* HistogramView.swift */; };
@@ -27,6 +24,9 @@
 		62E7122C2CC58CDB0064CBF4 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E7122B2CC58CDB0064CBF4 /* AccountViewController.swift */; };
 		62E7122E2CC58CE60064CBF4 /* SMSCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E7122D2CC58CE60064CBF4 /* SMSCodeViewController.swift */; };
 		8473C1584BE31AEA7A95CEA1 /* Pods_GymFlow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A334E3E0FCD4F366E849A7 /* Pods_GymFlow.framework */; };
+		C250096D2D0100630012A4CB /* GeminiAPI.plist in Resources */ = {isa = PBXBuildFile; fileRef = C25009692D0100630012A4CB /* GeminiAPI.plist */; };
+		C250096E2D0100630012A4CB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C250096A2D0100630012A4CB /* GoogleService-Info.plist */; };
+		C25009702D0100630012A4CB /* UCSB.plist in Resources */ = {isa = PBXBuildFile; fileRef = C250096C2D0100630012A4CB /* UCSB.plist */; };
 		C26487ED2CD82A2A00ACC29B /* BusyLevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26487EC2CD82A2A00ACC29B /* BusyLevelView.swift */; };
 		C26487F12CD8301100ACC29B /* BusyLevelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26487F02CD8301100ACC29B /* BusyLevelModel.swift */; };
 		C2C7D1932CFE77EF0041E64F /* IDModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C7D1912CFE77EF0041E64F /* IDModel.swift */; };
@@ -61,13 +61,9 @@
 		6201F2032CC58A3D00E1BAEB /* PhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneViewController.swift; sourceTree = "<group>"; };
 		6201F2082CC58A3E00E1BAEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6201F20B2CC58A3E00E1BAEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		6201F20D2CC58A3E00E1BAEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62075E402CC6BF7700C0C0B1 /* GymFlow.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GymFlow.entitlements; sourceTree = "<group>"; };
-		622802E62D00EFF8003F999A /* GeminiAPI.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = GeminiAPI.plist; path = ../../../Downloads/GeminiAPI.plist; sourceTree = "<group>"; };
 		622D19572CC753F100D9C2D1 /* MainViewController.swift .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController.swift .swift"; sourceTree = "<group>"; };
 		622D19592CC7547E00D9C2D1 /* LogoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutViewController.swift; sourceTree = "<group>"; };
-		62403FD92D00EBF90049A27E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
-		62403FDC2D00EC270049A27E /* UCSB.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = UCSB.plist; path = ../../../Downloads/UCSB.plist; sourceTree = "<group>"; };
 		625658532CEBF5F600576A6E /* ForeCastController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForeCastController.swift; sourceTree = "<group>"; };
 		625658552CEC258B00576A6E /* ForecastModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastModel.swift; sourceTree = "<group>"; };
 		625658572CEC25B800576A6E /* HistogramView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistogramView.swift; sourceTree = "<group>"; };
@@ -76,6 +72,9 @@
 		62E7122B2CC58CDB0064CBF4 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		62E7122D2CC58CE60064CBF4 /* SMSCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMSCodeViewController.swift; sourceTree = "<group>"; };
 		84A334E3E0FCD4F366E849A7 /* Pods_GymFlow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GymFlow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C25009692D0100630012A4CB /* GeminiAPI.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = GeminiAPI.plist; sourceTree = "<group>"; };
+		C250096A2D0100630012A4CB /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C250096C2D0100630012A4CB /* UCSB.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = UCSB.plist; sourceTree = "<group>"; };
 		C26487EC2CD82A2A00ACC29B /* BusyLevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusyLevelView.swift; sourceTree = "<group>"; };
 		C26487F02CD8301100ACC29B /* BusyLevelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusyLevelModel.swift; sourceTree = "<group>"; };
 		C2C7D18F2CFE77EF0041E64F /* CameraCaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraCaptureView.swift; sourceTree = "<group>"; };
@@ -134,10 +133,9 @@
 				6201F2012CC58A3D00E1BAEB /* SceneDelegate.swift */,
 				6201F2082CC58A3E00E1BAEB /* Assets.xcassets */,
 				6201F20A2CC58A3E00E1BAEB /* LaunchScreen.storyboard */,
-				6201F20D2CC58A3E00E1BAEB /* Info.plist */,
-				62403FD92D00EBF90049A27E /* GoogleService-Info.plist */,
-				622802E62D00EFF8003F999A /* GeminiAPI.plist */,
-				62403FDC2D00EC270049A27E /* UCSB.plist */,
+				C25009692D0100630012A4CB /* GeminiAPI.plist */,
+				C250096A2D0100630012A4CB /* GoogleService-Info.plist */,
+				C250096C2D0100630012A4CB /* UCSB.plist */,
 			);
 			path = GymFlow;
 			sourceTree = "<group>";
@@ -240,11 +238,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				622802E72D00EFF8003F999A /* GeminiAPI.plist in Resources */,
-				62403FDE2D00EC270049A27E /* UCSB.plist in Resources */,
+				C250096D2D0100630012A4CB /* GeminiAPI.plist in Resources */,
+				C250096E2D0100630012A4CB /* GoogleService-Info.plist in Resources */,
+				C25009702D0100630012A4CB /* UCSB.plist in Resources */,
 				6201F2092CC58A3E00E1BAEB /* Assets.xcassets in Resources */,
 				6201F20C2CC58A3E00E1BAEB /* Base in Resources */,
-				62403FDA2D00EBF90049A27E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,12 +461,15 @@
 				CODE_SIGN_ENTITLEMENTS = GymFlow/GymFlow.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = R8X3M4W8BH;
+				DEVELOPMENT_TEAM = R2FTZ5HQ3Y;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GymFlow/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need access to your camera";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arm64;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
@@ -477,7 +478,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = team05.GymFlow;
+				PRODUCT_BUNDLE_IDENTIFIER = team05.GymFlow1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -494,12 +495,15 @@
 				CODE_SIGN_ENTITLEMENTS = GymFlow/GymFlow.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = R8X3M4W8BH;
+				DEVELOPMENT_TEAM = R2FTZ5HQ3Y;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GymFlow/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need access to your camera";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arm64;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
@@ -508,7 +512,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = team05.GymFlow;
+				PRODUCT_BUNDLE_IDENTIFIER = team05.GymFlow1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
