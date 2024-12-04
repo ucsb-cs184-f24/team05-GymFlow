@@ -4,6 +4,7 @@
 
 ```
 git clone git@github.com:ucsb-cs184-f24/team05-GymFlow.git
+cd team05-GymFlow
 ```
 
 2. Make sure on main branch
