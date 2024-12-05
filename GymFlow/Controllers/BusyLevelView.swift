@@ -7,22 +7,17 @@ struct BusyLevelView: View {
 
     var body: some View {
         ZStack {
-            // Background gradient
-            LinearGradient(
-                gradient: Gradient(colors: [Color.purple, Color.blue]),
-                startPoint: .topLeading,
-                endPoint: .bottomTrailing
-            )
-            .edgesIgnoringSafeArea(.all)
+            // Background set to white
+            Color.white
+                .edgesIgnoringSafeArea(.all)
             
-            VStack(spacing: 30) {
+            VStack(spacing: 60) {
                 // Title
                 Text("Gym Busy Level")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                    .foregroundColor(.white)
-                    .shadow(radius: 10)
-                
+                    .font(.system(size: 40, weight: .heavy))
+                    .foregroundColor(.black)
+                    .padding(.top, -20)
+                                
                 // Speedometer
                 ZStack {
                     // Speedometer arc
@@ -35,27 +30,24 @@ struct BusyLevelView: View {
                             ),
                             lineWidth: 20
                         )
-                        .frame(width: 200, height: 200)
+                        .frame(width: 250, height: 250)
 
                     // Speedometer needle
                     NeedleView(angle: needleAngle)
-                        .stroke(Color.white, lineWidth: 4)
-                        .frame(width: 160, height: 180)
-                        .shadow(color: .black.opacity(0.3), radius: 5, x: 0, y: 5)
+                        .stroke(Color.black, lineWidth: 4) // Changed needle color to black for visibility
+                        .frame(width: 210, height: 210)
 
                     // Labels for empty and full
                     HStack {
                         Text("Empty")
-                            .font(.caption)
-                            .fontWeight(.bold)
-                            .foregroundColor(.white)
-                            .offset(x: -15, y: 20)
+                            .font(.system(size: 20, weight: .semibold, design: .rounded))
+                            .foregroundColor(.black)
+                            .offset(x: -50, y: 20)
                         Spacer()
                         Text("Full")
-                            .font(.caption)
-                            .fontWeight(.bold)
-                            .foregroundColor(.white)
-                            .offset(x: 15, y: 20)
+                            .font(.system(size: 20, weight: .semibold, design: .rounded))
+                            .foregroundColor(.black)
+                            .offset(x: 40, y: 20)
                     }
                     .frame(width: 200, height: 200)
                 }
@@ -66,38 +58,32 @@ struct BusyLevelView: View {
                         needleAngle = mapBusyLevelToAngle(busyLevel: newBusyLevel)
                     }
                 }
-                
+                                
                 // Busy level text
                 Text(model.busyLevelText)
-                    .font(.system(size: 20, weight: .semibold, design: .rounded))
-                    .foregroundColor(.white)
-                    .shadow(color: Color.black.opacity(0.4), radius: 10, x: 0, y: 10)
-
+                    .font(.system(size: 32, weight: .semibold, design: .rounded))
+                    .foregroundColor(.black) // Adjusted to black for better contrast
+                    .padding(.top, -100)
+                
                 // Button to update busy level
                 Button(action: {
                     model.fetchBusyLevel() // Fetches the updated busy level
                 }) {
-                    Text("Update Busy Level")
+                    Text("Refresh")
                         .font(.headline)
                         .fontWeight(.bold)
                         .foregroundColor(.white)
                         .padding()
-                        .frame(width: 200)
-                        .background(
-                            LinearGradient(
-                                gradient: Gradient(colors: [Color.blue.opacity(0.8), Color.blue]),
-                                startPoint: .leading,
-                                endPoint: .trailing
-                            )
-                        )
+                        .frame(width: 150)
+                        .background(Color.blue)
                         .cornerRadius(15)
-                        .shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 15)
                 }
             }
             .padding()
         }
         .onAppear {
             // Initialize the needle position on launch
+            model.fetchBusyLevel()
             needleAngle = mapBusyLevelToAngle(busyLevel: model.busyLevelText)
         }
     }
@@ -116,7 +102,7 @@ struct BusyLevelView: View {
             return 30
         case "above average":
             return 45
-        case "very busy":
+        case "high":
             return 90
         default:
             print("Unexpected busy level: \(busyLevel)")

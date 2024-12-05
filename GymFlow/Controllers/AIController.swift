@@ -27,7 +27,7 @@ class AIController: UIViewController {
     private func setupTitleLabel() {
             let titleLabel = UILabel()
             titleLabel.text = "Workout Guide"
-            titleLabel.font = UIFont.systemFont(ofSize: 34, weight: .heavy)  // Increased font size for better visibility
+            titleLabel.font = UIFont.systemFont(ofSize: 40, weight: .heavy)  // Increased font size for better visibility
             titleLabel.textColor = .black  // Added a color to make it stand out
             titleLabel.textAlignment = .center  // Center the text
             titleLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -35,7 +35,7 @@ class AIController: UIViewController {
 
             // Add constraints to position the title with more space from the top
             NSLayoutConstraint.activate([
-                titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 40),  // Adjusted constant for better spacing
+                titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 80),  // Adjusted constant for better spacing
                 titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
             ])
         }
@@ -55,7 +55,8 @@ class AIController: UIViewController {
     }
     
     private func setupButtons() {
-        let buttonTitles = ["Push", "Pull", "Legs", "Cardio", "Meal Plan"]
+//        let buttonTitles = ["Push", "Pull", "Legs", "Cardio", "Meal Plan"]
+        let buttonTitles = ["Push", "Pull", "Legs", "Cardio"]
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.distribution = .fillEqually

@@ -10,8 +10,8 @@ class MainViewController: UITabBarController {
         homeVC.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "house"), tag: 0)
         
         // Logout Tab - Green Screen with Log Out Button
-        let logoutVC = LogoutViewController()
-        logoutVC.tabBarItem = UITabBarItem(title: "Logout", image: UIImage(systemName: "arrow.backward.circle"), tag: 1)
+//        let logoutVC = LogoutViewController()
+//        logoutVC.tabBarItem = UITabBarItem(title: "Logout", image: UIImage(systemName: "arrow.backward.circle"), tag: 1)
         
         // Set view controllers for the tab bar
         
@@ -24,8 +24,10 @@ class MainViewController: UITabBarController {
         let idVC = IDController()
         idVC.tabBarItem = UITabBarItem(title: "ID", image: UIImage(systemName: "creditcard"), tag: 5)
         
+        let mealVC = MealPlanViewController()
+        mealVC.tabBarItem = UITabBarItem(title: "Nutrition", image: UIImage(systemName: "fork.knife"), tag: 6)
         
-        viewControllers = [homeVC, forecastVC, aiVC, idVC, logoutVC]
+        viewControllers = [homeVC, forecastVC, aiVC, idVC, mealVC]
         
         // Customize tab bar appearance
         tabBar.tintColor = .white

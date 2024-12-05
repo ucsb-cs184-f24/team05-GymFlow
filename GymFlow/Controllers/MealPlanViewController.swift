@@ -76,7 +76,7 @@ class MealPlanViewController: UIViewController {
         }
     }
     private func setupUI() {
-        setupCloseButton()
+//        setupCloseButton()
         setupMealTypeSegmentedControl()
         setupDiningHallPicker()
         setupResultLabel()
