@@ -4,7 +4,7 @@ struct HistogramView: View {
     var data: [HourAnalysis]
     
     var body: some View {
-        HStack(alignment: .bottom, spacing: 8) { // Adjust the spacing between bars
+        HStack(alignment: .bottom, spacing: 0) { // Adjust the spacing between bars
             ForEach(data, id: \.hour) { entry in
                 VStack {
                     // Handle "Closed" case (999) and adjust intensity
