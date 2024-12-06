@@ -35,7 +35,7 @@ class AIController: UIViewController {
 
             // Add constraints to position the title with more space from the top
             NSLayoutConstraint.activate([
-                titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 80),  // Adjusted constant for better spacing
+                titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 40),  // Adjusted constant for better spacing
                 titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
             ])
         }
@@ -68,23 +68,41 @@ class AIController: UIViewController {
             let button = UIButton(type: .system)
             button.setTitle(title, for: .normal)
             button.setTitleColor(.white, for: .normal)
-            
+            if let image = UIImage(named: "workout_1") {
+                button.setBackgroundImage(image, for: .normal)
+            } else {
+                // Fallback background color if image isn't found
+                button.backgroundColor = .systemBlue
+            }
             // Customize button appearance
-            button.backgroundColor = title == "Meal Plan" ? .systemOrange : .systemBlue
-            button.layer.cornerRadius = 30 // More rounded
+            //button.backgroundColor = title == "Meal Plan" ? .systemOrange : .systemBlue
+            button.layer.cornerRadius = 20 // More rounded
+            button.titleLabel?.shadowColor = .black
+            button.titleLabel?.shadowOffset = CGSize(width: 2, height: 2)
             button.layer.masksToBounds = true
             button.addTarget(self, action: #selector(buttonTapped(_:)), for: .touchUpInside)
-            
+            let overlayView = UIView()
+            overlayView.backgroundColor = UIColor.black.withAlphaComponent(0.3)
+            overlayView.translatesAutoresizingMaskIntoConstraints = false
+            button.addSubview(overlayView)
             // Adjust font size and weight
-            button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 24) // Bigger and bolder font
+            button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 32) // Bigger and bolder font
             
             // Add padding to the button
-            button.contentEdgeInsets = UIEdgeInsets(top: 10, left: 20, bottom: 10, right: 20)
-            
+            button.contentEdgeInsets = UIEdgeInsets(top: 5, left: 30, bottom: 15, right: 30)
+            button.layer.cornerRadius = 15
+            button.layer.masksToBounds = true
             // Set fixed height for buttons
-            button.heightAnchor.constraint(equalToConstant: 60).isActive = true
+            button.heightAnchor.constraint(equalToConstant:100).isActive = true
+            button.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width - 40).isActive = true
             
             stackView.addArrangedSubview(button)
+            
+            
+            
+            //might need type:custon
+            
+    
         }
 
         // The "Show Workout" button will be added dynamically later
