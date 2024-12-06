@@ -1,0 +1,3 @@
+# Team Contribution
+## Daniel Hwang
+I contributed primarily to the development of the BusyLevelView and HistogramView components. My work focused on creating a visually appealing and functional speedometer that dynamically adjusts based on real-time gym data, ensuring smooth animations and accurate needle positioning. I also improved the UI for the HistogramView by formatting the time labels for better readability. Additionally, I implemented authentication using FirebaseAuth to enable easy phone number login and refined the UI for both authentication pages. Lastly, I fixed the data retrieval process by converting the API output from descriptive "words" to actionable numerical data, enhancing the app's functionality and accuracy.
