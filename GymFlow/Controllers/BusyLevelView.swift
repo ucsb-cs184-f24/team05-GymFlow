@@ -12,85 +12,106 @@ struct BusyLevelView: View {
             Color.white
                 .edgesIgnoringSafeArea(.all)
             
-            VStack(spacing: 20) {
-                // Title
-                Text("Gym Forecast")
-                    .font(.system(size: 40, weight: .heavy))
+            VStack(spacing: 5) { // Adjust spacing between title and subtitle
+                // Main Title
+                Text("UCSB Recreation Center")
+                    .font(.system(size: 28, weight: .bold)) // Adjust size and weight for hierarchy
                     .foregroundColor(.black)
-                    .offset(y: 0)
+                    .offset(y:-20)
                 
-                // Speedometer
+                // Subtitle
+                Text("Gym Forecast")
+                    .font(.system(size: 20, weight: .semibold)) // Smaller, secondary font
+                    .foregroundColor(.black.opacity(0.7)) // Softer color for distinction
+                    .offset(y:-20)
+                
+                // Speedometer Section with Gray Background
                 ZStack {
-                    // Speedometer arc
-                    SpeedometerArc()
-                        .stroke(
-                            LinearGradient(
-                                gradient: Gradient(colors: [Color.blue.opacity(0.5), Color.blue]),
-                                startPoint: .leading,
-                                endPoint: .trailing
-                            ),
-                            lineWidth: 20
-                        )
-                        .frame(width: 250, height: 250)
-                        .offset(y:55)
-                    
-                    // Speedometer needle
-                    NeedleView(angle: needleAngle)
-                        .stroke(Color.black, lineWidth: 4) // Changed needle color to black for visibility
-                        .frame(width: 210, height: 210)
-                        .offset(y:55)
-                    
-                    // Labels for empty and full
-                    HStack {
-                        Text("Empty")
-                            .font(.system(size: 16, weight: .semibold, design: .rounded))
-                            .foregroundColor(.black)
-                            .offset(x: -50, y: 20)
-                        Spacer()
-                        Text("Full")
-                            .font(.system(size: 16, weight: .semibold, design: .rounded))
-                            .foregroundColor(.black)
-                            .offset(x: 40, y: 20)
+                    // Gray transparent background
+                    RoundedRectangle(cornerRadius: 12) // Smaller corner radius
+                        .fill(Color.gray.opacity(0.2)) // Slightly lighter gray
+                        .frame(width: 360, height: 260) // Reduced size
+                        .offset(y:0)
+                    // Speedometer
+                    VStack {
+                        ZStack {
+                            SpeedometerArc()
+                                .stroke(
+                                    LinearGradient(
+                                        gradient: Gradient(colors: [Color.blue.opacity(0.5), Color.blue]),
+                                        startPoint: .leading,
+                                        endPoint: .trailing
+                                    ),
+                                    lineWidth: 18 // Thinner arc
+                                )
+                                .frame(width: 230, height: 230) // Smaller speedometer
+                                .offset(y:50)
+                            
+                            NeedleView(angle: needleAngle)
+                                .stroke(Color.black, lineWidth: 3) // Thinner needle
+                                .frame(width: 200, height: 200)
+                                .offset(y:50)
+                            
+                            // Labels for empty and full
+                            HStack {
+                                Text("Empty")
+                                    .font(.system(size: 14, weight: .semibold, design: .rounded)) // Smaller font
+                                    .foregroundColor(.black)
+                                    .offset(x: -44, y: 68)
+                                Spacer()
+                                Text("Full")
+                                    .font(.system(size: 14, weight: .semibold, design: .rounded)) // Smaller font
+                                    .foregroundColor(.black)
+                                    .offset(x: 38, y: 68)
+                            }
+                            .frame(width: 180, height: 180) // Reduced size
+                        }
+                        .frame(height: 140) // Smaller overall height
+                        .onChange(of: model.busyLevelValue) { newBusyLevel in
+                            // Smoothly update the needle angle when busy level changes
+                            withAnimation(.easeInOut(duration: 0.5)) {
+                                needleAngle = mapValueToAngle(value: newBusyLevel)
+                            }
+                        }
+                        
+                        // Display the percentage and the dynamic description
+                        VStack(spacing: 5) { // Tighter spacing
+                            Text("Gym Capacity: \(Int(model.busyLevelValue))%")
+                                .font(.system(size: 18, weight: .medium, design: .rounded)) // Smaller font
+                                .foregroundColor(.black)
+                            
+                            Text(getBusyLevelDescription(for: model.busyLevelValue))
+                                .font(.system(size: 18, weight: .medium, design: .rounded)) // Smaller font
+                                .foregroundColor(.black)
+                        }
+                        .offset(y:10)
                     }
-                    .offset(y:55)
-                    .frame(width: 200, height: 200)
-                    
                 }
-                .frame(height: 150)
-                .onChange(of: model.busyLevelValue) { newBusyLevel in
-                    // Smoothly update the needle angle when busy level changes
-                    withAnimation(.easeInOut(duration: 0.5)) {
-                        needleAngle = mapValueToAngle(value: newBusyLevel)
+                
+                // Histogram Section with Gray Background
+                ZStack {
+                    // Gray transparent background
+                    RoundedRectangle(cornerRadius: 12) // Smaller corner radius
+                        .fill(Color.gray.opacity(0.2)) // Slightly lighter gray
+                        .frame(width: 360, height: 260) // Reduced size
+                        .offset(y:30)
+                    if forecastModel.hourAnalysis.isEmpty {
+                        Text("Press Predict to fetch data")
+                            .foregroundColor(.black)
+                            .italic()
+                            .font(.system(size: 14)) // Smaller font
+                    } else {
+                        HistogramView(data: forecastModel.hourAnalysis)
+                            .frame(height: 240) // Reduced height for histogram
+                            .padding(.horizontal)
                     }
-                }
-                
-                
-                // Display the percentage and the dynamic description
-                VStack {
-                    Text("Gym Capacity: \(Int(model.busyLevelValue))%")
-                        .font(.system(size: 20, weight: .medium, design: .rounded))
-                        .foregroundColor(.black)
-                    
-                    Text(getBusyLevelDescription(for: model.busyLevelValue))
-                        .font(.system(size: 20, weight: .medium, design: .rounded))
-                        .foregroundColor(.black)
-                }
-                .offset(y: -15)
-                
-                
-                if forecastModel.hourAnalysis.isEmpty {
-                    Text("Press Predict to fetch data")
-                        .foregroundColor(.black)  // Changed to black for better contrast
-                        .italic()
-                } else {
-//                    ScrollView(.horizontal) {
-                    HistogramView(data: forecastModel.hourAnalysis)
-                        .frame(height: 300)
-                        .padding(.horizontal)
-//                    }
+                    Spacer()
+                        .frame(height: 20)
                 }
             }
+            .padding(.bottom, 50)
         }
+        
         .onAppear {
             // Initialize the needle position on launch
             forecastModel.fetchDayForecast()
@@ -108,7 +129,9 @@ struct BusyLevelView: View {
     private func getBusyLevelDescription(for value: Double) -> String {
         // Dynamic description based on busy level
         switch value {
-        case 0..<26:
+        case 0:
+            return "The gym is currently closed. Rest day it is!"
+        case 1..<26:
             return "Almost Empty – Best Time to Hit the Gym!"
         case 26..<51:
             return "Not Crowded – Plenty of Space!"
@@ -121,6 +144,7 @@ struct BusyLevelView: View {
         }
     }
 }
+
 
 struct SpeedometerArc: Shape {
     func path(in rect: CGRect) -> Path {

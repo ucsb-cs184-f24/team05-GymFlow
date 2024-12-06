@@ -56,19 +56,20 @@ struct HistogramContainerView: View {
                 HStack {
                     Text("100%")
                         .font(.caption)
-                        .foregroundColor(.gray)
+                        .foregroundColor(.black)
                         .offset(x:-20, y: -15) // Slightly above the line
                     Spacer()
                 }
                 .frame(width: totalWidth) // Match the width of the histogram
 
                 Rectangle()
-                    .fill(Color.gray.opacity(0.5)) // Faint gray line
+                    .fill(Color.black.opacity(0.5)) // Faint gray line
                     .frame(height: 1)
-                    .frame(width: totalWidth) // Set line width to match the total histogram width
-                    .offset(x:-20, y: -15) // Adjust the line position
+                    .frame(width: 340) // Set line width to match the total histogram width
+                    .offset(x:-92, y: -15) // Adjust the line position
             }
             .padding(.leading, 20) // Align the line with the histogram
+            
             
             VStack(spacing: 4) { // Add spacing between bars and labels
                 // Bars section
@@ -80,23 +81,62 @@ struct HistogramContainerView: View {
                 
                 // Time labels section
                 HStack(spacing: 0) {
-                    ForEach(data, id: \.hour) { entry in
-                        if entry.hour % 3 == 0 { // Show labels only at 3-hour increments
-                            Text(formatHour(entry.hour))
-                                .font(.caption2)
-                                .foregroundColor(.gray)
-                                .frame(width: 29)
-                        } else {
-                            Spacer()
-                                .frame(width: 14) // Maintain alignment for missing labels
-                        }
-                    }
+                    Text("6AM")
+                        .font(.caption2)
+                        .foregroundColor(.black)
+                        .frame(width: 29)
+                        .offset(x: -30)
+                    
+                    Spacer().frame(width: 45)
+                    
+                    Text("9AM")
+                        .font(.caption2)
+                        .foregroundColor(.black)
+                        .frame(width: 29)
+                        .offset(x: -44)
+                    
+                    Spacer().frame(width: 45)
+                    
+                    Text("12PM")
+                        .font(.caption2)
+                        .foregroundColor(.black)
+                        .frame(width: 29)
+                        .offset(x: -55)
+                    
+                    Spacer().frame(width: 45)
+                    
+                    Text("3PM")
+                        .font(.caption2)
+                        .foregroundColor(.black)
+                        .frame(width: 29)
+                        .offset(x: -71)
+                    
+                    Spacer().frame(width: 45)
+                    
+                    Text("6PM")
+                        .font(.caption2)
+                        .foregroundColor(.black)
+                        .frame(width: 29)
+                        .offset(x: -85)
+                    
+                    Spacer().frame(width: 45)
+                    
+                    Text("9PM")
+                        .font(.caption2)
+                        .foregroundColor(.black)
+                        .frame(width: 29)
+                        .offset(x: -98)
                 }
                 .offset(x: -16)
             }
         }
         .offset(x: 83, y: 50) // Move the entire histogram down and to the right
     }
+    private func calculateHistogramWidth() -> CGFloat {
+           let totalBarsWidth = CGFloat(data.count) * barWidth
+           let totalSpacing = CGFloat(data.count - 1) * barSpacing
+           return totalBarsWidth + totalSpacing
+       }
 
     private func formatHour(_ hour: Int) -> String {
             if hour == 0 {

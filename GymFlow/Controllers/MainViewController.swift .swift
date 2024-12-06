@@ -12,10 +12,7 @@ class MainViewController: UITabBarController {
         // AI Tab - Workouts Screen
         let aiVC = AIController()
         aiVC.tabBarItem = UITabBarItem(title: "Workouts", image: UIImage(systemName: "person.fill"), tag: 2)
-        
-        // Forecast Tab
-        let forecastVC = ForeCastController()
-        forecastVC.tabBarItem = UITabBarItem(title: "Forecast", image: UIImage(systemName: "figure.walk.circle"), tag: 4)
+    
         
         // ID Tab
         let idVC = IDController()
@@ -25,7 +22,10 @@ class MainViewController: UITabBarController {
         let mealVC = MealPlanViewController()
         mealVC.tabBarItem = UITabBarItem(title: "Nutrition", image: UIImage(systemName: "fork.knife"), tag: 6)
         
-        viewControllers = [homeVC, forecastVC, aiVC, idVC, mealVC]
+        let logoutVC = LogoutViewController()
+                logoutVC.tabBarItem = UITabBarItem(title: "Logout", image: UIImage(systemName: "arrow.backward.circle"), tag: 1)
+                
+        viewControllers = [homeVC, aiVC, idVC, mealVC, logoutVC]
         
         // Customize tab bar appearance
         tabBar.tintColor = .systemBlue

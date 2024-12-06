@@ -3,6 +3,34 @@ import FirebaseAuth
 
 class PhoneViewController: UIViewController {
     
+    private let backgroundImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "background_image") // Replace with your actual image name
+        imageView.contentMode = .scaleAspectFill
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.clipsToBounds = true
+        return imageView
+    }()
+    
+    private let logoImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "logotrans") // Replace with your actual logo file name
+        imageView.contentMode = .scaleAspectFit
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
+    
+    private let welcomeLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Enter your phone number to get started."
+        label.textColor = .white
+        label.font = UIFont.systemFont(ofSize: 22, weight: .semibold)
+        label.textAlignment = .center
+        label.numberOfLines = 0
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
     private let phoneField: UITextField = {
         let field = UITextField()
         field.backgroundColor = .secondarySystemBackground
@@ -27,17 +55,43 @@ class PhoneViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBackground
+        self.navigationController?.isNavigationBarHidden = true
         
+        // Add the background image view
+        view.addSubview(backgroundImageView)
+        NSLayoutConstraint.activate([
+            backgroundImageView.topAnchor.constraint(equalTo: view.topAnchor),
+            backgroundImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            backgroundImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            backgroundImageView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
+        
+        // Add the logo, welcome label, phone field, and button
+        view.addSubview(logoImageView)
+        view.addSubview(welcomeLabel)
         view.addSubview(phoneField)
         view.addSubview(getCodeButton)
         
+        // Layout constraints
         NSLayoutConstraint.activate([
+            // Logo at the top center
+            logoImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: -50),
+            logoImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            logoImageView.widthAnchor.constraint(equalToConstant: 300),
+            logoImageView.heightAnchor.constraint(equalToConstant: 300),
+            
+            // Welcome label below the logo
+            welcomeLabel.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: -70),
+            welcomeLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            welcomeLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            
+            // Phone field below the welcome label
+            phoneField.topAnchor.constraint(equalTo: welcomeLabel.bottomAnchor, constant: 20),
             phoneField.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            phoneField.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -30),
             phoneField.widthAnchor.constraint(equalToConstant: 250),
             phoneField.heightAnchor.constraint(equalToConstant: 50),
             
+            // Get code button below the phone field
             getCodeButton.topAnchor.constraint(equalTo: phoneField.bottomAnchor, constant: 20),
             getCodeButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             getCodeButton.widthAnchor.constraint(equalToConstant: 200),
