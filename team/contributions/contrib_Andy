@@ -1,0 +1,5 @@
+contrib_Andy
+
+- My primary role was working on the forecast feature. The user can see a histogram indicating the raw hour percentages. The information are sourced from besttime.app and 100% means that the given venue is curretly 
+at the max busy level.
+- The bars will dynamically change based on the day of week. 
