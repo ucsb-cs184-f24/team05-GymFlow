@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4B4AAA992CF989250090A3F2 /* MealPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4AAA982CF989170090A3F2 /* MealPlanViewController.swift */; };
 		4B4AAA9B2CF992020090A3F2 /* DiningAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4AAA9A2CF991F50090A3F2 /* DiningAPIClient.swift */; };
+		539111D639399561341520F9 /* Pods_GymFlow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 058AE8151192B5F90B51A106 /* Pods_GymFlow.framework */; };
 		6201F2002CC58A3D00E1BAEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6201F1FF2CC58A3D00E1BAEB /* AppDelegate.swift */; };
 		6201F2022CC58A3D00E1BAEB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6201F2012CC58A3D00E1BAEB /* SceneDelegate.swift */; };
 		6201F2042CC58A3D00E1BAEB /* PhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6201F2032CC58A3D00E1BAEB /* PhoneViewController.swift */; };
@@ -25,7 +26,6 @@
 		62E712292CC58B080064CBF4 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E712282CC58B080064CBF4 /* AuthManager.swift */; };
 		62E7122C2CC58CDB0064CBF4 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E7122B2CC58CDB0064CBF4 /* AccountViewController.swift */; };
 		62E7122E2CC58CE60064CBF4 /* SMSCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E7122D2CC58CE60064CBF4 /* SMSCodeViewController.swift */; };
-		64AC0BA604C90167E23192D6 /* Pods_GymFlow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9872C7E219C2A1EFEAAAB06E /* Pods_GymFlow.framework */; };
 		C250096E2D0100630012A4CB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C250096A2D0100630012A4CB /* GoogleService-Info.plist */; };
 		C26487ED2CD82A2A00ACC29B /* BusyLevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26487EC2CD82A2A00ACC29B /* BusyLevelView.swift */; };
 		C26487F12CD8301100ACC29B /* BusyLevelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26487F02CD8301100ACC29B /* BusyLevelModel.swift */; };
@@ -51,7 +51,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		219D1D8FE381924F1D487586 /* Pods-GymFlow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymFlow.release.xcconfig"; path = "Target Support Files/Pods-GymFlow/Pods-GymFlow.release.xcconfig"; sourceTree = "<group>"; };
+		058AE8151192B5F90B51A106 /* Pods_GymFlow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GymFlow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		31630EAAA66C7D14E271F9D2 /* Pods-GymFlow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymFlow.release.xcconfig"; path = "Target Support Files/Pods-GymFlow/Pods-GymFlow.release.xcconfig"; sourceTree = "<group>"; };
 		4B4AAA982CF989170090A3F2 /* MealPlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealPlanViewController.swift; sourceTree = "<group>"; };
 		4B4AAA9A2CF991F50090A3F2 /* DiningAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiningAPIClient.swift; sourceTree = "<group>"; };
 		6201F1FC2CC58A3D00E1BAEB /* GymFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GymFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,7 +73,7 @@
 		62E712282CC58B080064CBF4 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		62E7122B2CC58CDB0064CBF4 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		62E7122D2CC58CE60064CBF4 /* SMSCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMSCodeViewController.swift; sourceTree = "<group>"; };
-		9872C7E219C2A1EFEAAAB06E /* Pods_GymFlow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GymFlow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		78DF0266F0175D3A6BA9FD9D /* Pods-GymFlow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymFlow.debug.xcconfig"; path = "Target Support Files/Pods-GymFlow/Pods-GymFlow.debug.xcconfig"; sourceTree = "<group>"; };
 		C250096A2D0100630012A4CB /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C26487EC2CD82A2A00ACC29B /* BusyLevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusyLevelView.swift; sourceTree = "<group>"; };
 		C26487F02CD8301100ACC29B /* BusyLevelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusyLevelModel.swift; sourceTree = "<group>"; };
@@ -81,7 +82,6 @@
 		C2C7D1912CFE77EF0041E64F /* IDModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDModel.swift; sourceTree = "<group>"; };
 		C2C7D1922CFE77EF0041E64F /* IDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDView.swift; sourceTree = "<group>"; };
 		C2DFA7B12CF555C700854B1D /* AIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIController.swift; sourceTree = "<group>"; };
-		E6AB0EB2062284B5CDBAFE27 /* Pods-GymFlow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymFlow.debug.xcconfig"; path = "Target Support Files/Pods-GymFlow/Pods-GymFlow.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,28 +90,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2DFA7B52CF55D0E00854B1D /* GoogleGenerativeAI in Frameworks */,
-				64AC0BA604C90167E23192D6 /* Pods_GymFlow.framework in Frameworks */,
+				539111D639399561341520F9 /* Pods_GymFlow.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		615500BA7CD0C3E0AE574BD6 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				9872C7E219C2A1EFEAAAB06E /* Pods_GymFlow.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		6201F1F32CC58A3D00E1BAEB = {
 			isa = PBXGroup;
 			children = (
 				6201F1FE2CC58A3D00E1BAEB /* GymFlow */,
 				6201F1FD2CC58A3D00E1BAEB /* Products */,
 				FB4B4EF55989E200CBEBEBFF /* Pods */,
-				615500BA7CD0C3E0AE574BD6 /* Frameworks */,
+				B05BB72C2B0655789F4EDB3F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -165,11 +157,19 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		B05BB72C2B0655789F4EDB3F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				058AE8151192B5F90B51A106 /* Pods_GymFlow.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FB4B4EF55989E200CBEBEBFF /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E6AB0EB2062284B5CDBAFE27 /* Pods-GymFlow.debug.xcconfig */,
-				219D1D8FE381924F1D487586 /* Pods-GymFlow.release.xcconfig */,
+				78DF0266F0175D3A6BA9FD9D /* Pods-GymFlow.debug.xcconfig */,
+				31630EAAA66C7D14E271F9D2 /* Pods-GymFlow.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -181,12 +181,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6201F2102CC58A3E00E1BAEB /* Build configuration list for PBXNativeTarget "GymFlow" */;
 			buildPhases = (
-				DC6DDD7B34C9EC6B773E57D1 /* [CP] Check Pods Manifest.lock */,
+				5CE54172F40A5D3F22E8BDF4 /* [CP] Check Pods Manifest.lock */,
 				6201F1F82CC58A3D00E1BAEB /* Sources */,
 				6201F1F92CC58A3D00E1BAEB /* Frameworks */,
 				6201F1FA2CC58A3D00E1BAEB /* Resources */,
 				6259ECF62CC5927200EC973F /* Embed Frameworks */,
-				54D064BDF7EB879B3B0331AF /* [CP] Embed Pods Frameworks */,
+				AF4F7F4C79E1BE5BB4A773D4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -249,24 +249,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		54D064BDF7EB879B3B0331AF /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GymFlow/Pods-GymFlow-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GymFlow/Pods-GymFlow-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GymFlow/Pods-GymFlow-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DC6DDD7B34C9EC6B773E57D1 /* [CP] Check Pods Manifest.lock */ = {
+		5CE54172F40A5D3F22E8BDF4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -286,6 +269,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF4F7F4C79E1BE5BB4A773D4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GymFlow/Pods-GymFlow-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GymFlow/Pods-GymFlow-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GymFlow/Pods-GymFlow-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -454,7 +454,7 @@
 		};
 		6201F2112CC58A3E00E1BAEB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E6AB0EB2062284B5CDBAFE27 /* Pods-GymFlow.debug.xcconfig */;
+			baseConfigurationReference = 78DF0266F0175D3A6BA9FD9D /* Pods-GymFlow.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -488,7 +488,7 @@
 		};
 		6201F2122CC58A3E00E1BAEB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 219D1D8FE381924F1D487586 /* Pods-GymFlow.release.xcconfig */;
+			baseConfigurationReference = 31630EAAA66C7D14E271F9D2 /* Pods-GymFlow.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
