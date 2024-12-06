@@ -3,6 +3,26 @@ import FirebaseAuth
 
 class SMSCodeViewController: UIViewController {
     
+    private let backgroundImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "background_image") // Replace with your actual image name
+        imageView.contentMode = .scaleAspectFill
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.clipsToBounds = true
+        return imageView
+    }()
+    
+    private let instructionLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Enter the verification code sent to your phone."
+        label.textColor = .white
+        label.font = UIFont.systemFont(ofSize: 18, weight: .medium)
+        label.textAlignment = .center
+        label.numberOfLines = 0
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
     private let codeField: UITextField = {
         let field = UITextField()
         field.backgroundColor = .secondarySystemBackground
@@ -10,6 +30,8 @@ class SMSCodeViewController: UIViewController {
         field.returnKeyType = .continue
         field.textAlignment = .center
         field.keyboardType = .numberPad
+        field.layer.cornerRadius = 10
+        field.layer.masksToBounds = true
         field.translatesAutoresizingMaskIntoConstraints = false
         return field
     }()
@@ -19,24 +41,40 @@ class SMSCodeViewController: UIViewController {
         button.setTitle("Verify", for: .normal)
         button.backgroundColor = .systemGreen
         button.setTitleColor(.white, for: .normal)
-        button.layer.cornerRadius = 5
+        button.layer.cornerRadius = 10
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBackground
+        
+        // Add the background image
+        view.addSubview(backgroundImageView)
+        NSLayoutConstraint.activate([
+            backgroundImageView.topAnchor.constraint(equalTo: view.topAnchor),
+            backgroundImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            backgroundImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            backgroundImageView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
+        
+        // Add instruction label, code field, and verify button
+        view.addSubview(instructionLabel)
         view.addSubview(codeField)
         view.addSubview(verifyButton)
         
         codeField.delegate = self
         verifyButton.addTarget(self, action: #selector(verifyTapped), for: .touchUpInside)
         
+        // Layout constraints
         NSLayoutConstraint.activate([
+            instructionLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 80),
+            instructionLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            instructionLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            
+            codeField.topAnchor.constraint(equalTo: instructionLabel.bottomAnchor, constant: 40),
             codeField.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            codeField.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            codeField.widthAnchor.constraint(equalToConstant: 220),
+            codeField.widthAnchor.constraint(equalToConstant: 250),
             codeField.heightAnchor.constraint(equalToConstant: 50),
             
             verifyButton.topAnchor.constraint(equalTo: codeField.bottomAnchor, constant: 20),

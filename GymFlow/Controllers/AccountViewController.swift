@@ -5,15 +5,17 @@ import Combine
 class AccountViewController: UIViewController {
     
     private let busyLevelModel = BusyLevelModel()
+    private let forecastModel = ForecastModel()
     private var hostingController: UIHostingController<BusyLevelView>?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Set up the SwiftUI view and host it in a UIHostingController
-        let busyLevelView = BusyLevelView(model: busyLevelModel)
+        let busyLevelView = BusyLevelView(model: busyLevelModel, forecastModel: forecastModel)
         
         hostingController = UIHostingController(rootView: busyLevelView)
+        
         
         if let hostingController = hostingController {
             // Add the hosting controller as a child

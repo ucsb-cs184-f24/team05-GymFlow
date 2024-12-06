@@ -1,47 +1,42 @@
 import Foundation
 
 class BusyLevelModel: ObservableObject {
-    @Published var busyLevelText: String = "Update"
-    
+    @Published var busyLevelValue: Double = 0.0 // Numerical value for the busy level (hour_raw)
+
     private let apiKey: String = "pub_69c0200007ea4e7b999c9e1da8bc6261"
     private let venueId: String = "ven_5965782d62435251644858524159365f51575f357263394a496843"
-    
+
     func fetchBusyLevel() {
-        // Get current day of the week and hour
-        let currentDate = Date()
-        let calendar = Calendar.current
-        let dayInt = calendar.component(.weekday, from: currentDate) // Sunday is 1, Saturday is 7
-        let hour = calendar.component(.hour, from: currentDate)
-        
-        // Construct URL with dynamic parameters
-        var urlComponents = URLComponents(string: "https://besttime.app/api/v1/forecasts/now")!
+        // Construct URL for the "query_now_raw" endpoint
+        var urlComponents = URLComponents(string: "https://besttime.app/api/v1/forecasts/now/raw")!
         urlComponents.queryItems = [
             URLQueryItem(name: "api_key_public", value: apiKey),
-            URLQueryItem(name: "venue_id", value: venueId),
-//            URLQueryItem(name: "day_int", value: "\(dayInt)"),
-//            URLQueryItem(name: "hour", value: "\(hour)")
+            URLQueryItem(name: "venue_id", value: venueId)
         ]
-        
+
         guard let url = urlComponents.url else { return }
-        
-        let task = URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
-            guard let data = data, error == nil else { return }
+
+        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+            guard let data = data, error == nil else {
+                print("Error: \(error?.localizedDescription ?? "Unknown error")")
+                return
+            }
             
             do {
                 if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
                    let analysis = json["analysis"] as? [String: Any],
-                   let hourAnalysis = analysis["hour_analysis"] as? [String: Any],
-                   let intensityText = hourAnalysis["intensity_txt"] as? String {
-                    
+                   let hourRaw = analysis["hour_raw"] as? Double {
                     DispatchQueue.main.async {
-                        self?.busyLevelText = intensityText
+                        self.busyLevelValue = hourRaw
+                        print("Updated Busy Level Value: \(hourRaw)")
                     }
+                } else {
+                    print("Error: JSON structure is not as expected.")
                 }
             } catch {
                 print("Failed to parse JSON: \(error)")
             }
         }
-        
         task.resume()
     }
 }

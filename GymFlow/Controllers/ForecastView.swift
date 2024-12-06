@@ -39,11 +39,7 @@ struct ForeCastView: View {
                         .foregroundColor(.black)  // Changed to black for better contrast
                         .italic()
                 } else {
-                    ScrollView(.horizontal) {
-                        HistogramView(data: model.hourAnalysis)
-                            .frame(height: 300)
-                            .padding(.horizontal)
-                    }
+                    
                 }
                 
 //                Button(action: {
