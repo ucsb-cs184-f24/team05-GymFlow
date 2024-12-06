@@ -53,3 +53,9 @@ In gymflow, the interface will provide users with a graphic of how busy the UCSB
   * dhwang154 , Daniel Hwang
   * andyjin1 , Andy Jin
   * Tommygithubaccount123 , Thomas So
+
+#Repo Structure
+-GymFlow.xcodeproj and GymFlow.xcworkspace are related to the xcode build.
+-GymFlow contains the actual files that make up the project which includes controllers and managers.
+-Pods contains the database installs.
+-team contains the files for homework
