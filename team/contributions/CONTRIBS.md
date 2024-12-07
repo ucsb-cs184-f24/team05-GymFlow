@@ -13,7 +13,7 @@ My initial work involved with creating the first prototypes for the UI of this a
 
 
 ## Thomas
-Worked on connecting sign on page with app main screen. Helped with back-end research for API. Created app layout design and helped introduce our current features. Created Gemini feature for workout prompts.
+Worked on connecting sign on page with app main screen. Helped with back-end research for API. Created app layout design and helped introduce our current features. Created Gemini feature for workout prompts. Emphasis on general debugging and devOps work with most PRs. Was main tester for simulator + physical devices.
 
 ## Winston
 I worked on the initial logo design as well as built the feature that allows the user to take a picture of their ID and store it on the app to use to scan in at the Recreation Center. I also did extensive testing and debugging.
