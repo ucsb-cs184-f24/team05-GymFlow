@@ -2,154 +2,167 @@ import UIKit
 import GoogleGenerativeAI
 
 class AIController: UIViewController {
-    
-    // Define the GenerativeModel instance (will be initialized later)
     var generativeModel: GenerativeModel?
-    
-    // Store the workout text returned from the API
     var workoutText: String?
-    
-    // Reference to the "Show Workout" button, initially nil
-    var showWorkoutButton: UIButton?
-    
     var titleLabel: UILabel?
-    
+    var scrollView: UIScrollView!
+    var contentView: UIView!
+    var workoutPrompts: [String: String] = [:]
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         setupTitleLabel()
+        setupScrollView()
         setupButtons()
-        
-        // Load the API key and initialize the GenerativeModel after viewDidLoad
+
         initializeGenerativeModel()
     }
-    
-    private func setupTitleLabel() {
-            let titleLabel = UILabel()
-            titleLabel.text = "Workout Guide"
-            titleLabel.font = UIFont.systemFont(ofSize: 40, weight: .heavy)  // Increased font size for better visibility
-            titleLabel.textColor = .black  // Added a color to make it stand out
-            titleLabel.textAlignment = .center  // Center the text
-            titleLabel.translatesAutoresizingMaskIntoConstraints = false
-            view.addSubview(titleLabel)
 
-            // Add constraints to position the title with more space from the top
-            NSLayoutConstraint.activate([
-                titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 80),  // Adjusted constant for better spacing
-                titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
-            ])
-        }
-    
+    private func setupTitleLabel() {
+        titleLabel = UILabel()
+        titleLabel?.text = "Workout Guide"
+        titleLabel?.font = UIFont.systemFont(ofSize: 40, weight: .heavy)
+        titleLabel?.textColor = .black
+        titleLabel?.textAlignment = .center
+        titleLabel?.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(titleLabel!)
+
+        NSLayoutConstraint.activate([
+            titleLabel!.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 40),
+            titleLabel!.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        ])
+    }
+
+    private func setupScrollView() {
+        scrollView = UIScrollView()
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(scrollView)
+
+        NSLayoutConstraint.activate([
+            scrollView.topAnchor.constraint(equalTo: titleLabel!.bottomAnchor, constant: 20),
+            scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
+
+        contentView = UIView()
+        contentView.translatesAutoresizingMaskIntoConstraints = false
+        scrollView.addSubview(contentView)
+
+        NSLayoutConstraint.activate([
+            contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
+            contentView.topAnchor.constraint(equalTo: scrollView.topAnchor)
+        ])
+    }
+
     private func initializeGenerativeModel() {
-        // Load the API key from the plist
         guard let apiKey = loadAPIKey() else {
             print("Error: Unable to load API key")
             return
         }
-        
-        // Initialize the GenerativeModel with the API key
+
         generativeModel = GenerativeModel(
-            name: "gemini-1.5-flash", // Specify the appropriate model
+            name: "gemini-1.5-flash",
             apiKey: apiKey
         )
     }
-    
+
     private func setupButtons() {
-//        let buttonTitles = ["Push", "Pull", "Legs", "Cardio", "Meal Plan"]
         let buttonTitles = ["Push", "Pull", "Legs", "Cardio"]
         let stackView = UIStackView()
         stackView.axis = .vertical
-        stackView.distribution = .fillEqually
+        stackView.distribution = .equalSpacing
         stackView.alignment = .fill
         stackView.spacing = 20
-        
-        // Iterate through the button titles and create buttons
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        contentView.addSubview(stackView)
+
+        NSLayoutConstraint.activate([
+            stackView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+            stackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
+            stackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
+            stackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
+            stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -20)
+        ])
+
         for title in buttonTitles {
-            let button = UIButton(type: .system)
+            let containerView = UIView()
+            containerView.layer.cornerRadius = 15
+            containerView.clipsToBounds = true
+            containerView.translatesAutoresizingMaskIntoConstraints = false
+            stackView.addArrangedSubview(containerView)
+            containerView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height * 0.15).isActive = true
+
+            let imageView = UIImageView()
+            imageView.translatesAutoresizingMaskIntoConstraints = false
+            containerView.addSubview(imageView)
+
+            let button = UIButton(type: .custom)
+            button.translatesAutoresizingMaskIntoConstraints = false
+            button.addTarget(self, action: #selector(buttonTapped(_:)), for: .touchUpInside)
             button.setTitle(title, for: .normal)
             button.setTitleColor(.white, for: .normal)
-            
-            // Customize button appearance
-            button.backgroundColor = title == "Meal Plan" ? .systemOrange : .systemBlue
-            button.layer.cornerRadius = 30 // More rounded
-            button.layer.masksToBounds = true
-            button.addTarget(self, action: #selector(buttonTapped(_:)), for: .touchUpInside)
-            
-            // Adjust font size and weight
-            button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 24) // Bigger and bolder font
-            
-            // Add padding to the button
-            button.contentEdgeInsets = UIEdgeInsets(top: 10, left: 20, bottom: 10, right: 20)
-            
-            // Set fixed height for buttons
-            button.heightAnchor.constraint(equalToConstant: 60).isActive = true
-            
-            stackView.addArrangedSubview(button)
-        }
+            button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 32)
+            button.contentEdgeInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+            containerView.addSubview(button)
 
-        // The "Show Workout" button will be added dynamically later
-        let showWorkoutButton = UIButton(type: .system)
-        showWorkoutButton.setTitle("Show Workout", for: .normal)
-        showWorkoutButton.setTitleColor(.white, for: .normal)
-        showWorkoutButton.backgroundColor = .systemGreen
-        showWorkoutButton.titleLabel?.font = UIFont.systemFont(ofSize: 24, weight: .bold)
-        showWorkoutButton.layer.cornerRadius = 30 // More rounded
-        showWorkoutButton.layer.masksToBounds = true
-        showWorkoutButton.addTarget(self, action: #selector(showWorkoutButtonTapped), for: .touchUpInside)
-        showWorkoutButton.isHidden = true // Initially hidden
-        stackView.addArrangedSubview(showWorkoutButton)
-        
-        // Save reference to the button to update its state later
-        self.showWorkoutButton = showWorkoutButton
-        
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(stackView)
-        
-        // Layout constraints for the stack view
-        NSLayoutConstraint.activate([
-            stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
-            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40)
-        ])
+            // Determine the image name based on the button title
+            let imageName: String
+            if title == "Cardio" {
+                imageName = "workout_1"
+            } else if title == "Push" {
+                imageName = "workout_2"
+            } else if title == "Pull" {
+                imageName = "workout_3"
+            } else {
+                imageName = "workout_4"
+            }
+
+            imageView.image = UIImage(named: imageName)
+            imageView.contentMode = .scaleAspectFill
+            imageView.clipsToBounds = true
+
+            NSLayoutConstraint.activate([
+                imageView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
+                imageView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
+                imageView.topAnchor.constraint(equalTo: containerView.topAnchor),
+                imageView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor),
+                button.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
+                button.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
+                button.topAnchor.constraint(equalTo: containerView.topAnchor),
+                button.bottomAnchor.constraint(equalTo: containerView.bottomAnchor)
+            ])
+        }
     }
-    
+
     @objc private func buttonTapped(_ sender: UIButton) {
         guard let title = sender.titleLabel?.text else { return }
-                
-        // Ensure the generative model is initialized before using it
-        guard let generativeModel = generativeModel else {
-            print("GenerativeModel is not initialized")
-            return
-        }
-        
-        // Fetch the workout prompt using the GenerativeModel API
-        if title == "Meal Plan" {
-            presentMealPlanView()
-        }
-        else{
-            fetchWorkoutPrompt(for: title, generativeModel: generativeModel) {
-                [weak self] success, message in
-                self?.showPopup(message: message)
-                
-                // If the API call was successful, save the workout text and show the button
+
+        if let workout = workoutPrompts[title] {
+            // Use the saved workout
+            showPopup(message: workout)
+        } else {
+            // Fetch the workout from the API
+            guard let generativeModel = generativeModel else {
+                print("GenerativeModel is not initialized")
+                return
+            }
+
+            fetchWorkoutPrompt(for: title, generativeModel: generativeModel) { [weak self] success, message in
                 if success {
-                    self?.workoutText = message // Save the returned workout text
-                    self?.showWorkoutButton?.isHidden = false // Show the "Show Workout" button
+                    self?.workoutPrompts[title] = message // Save the fetched workout
+                    self?.showPopup(message: message)
+                } else {
+                    self?.showPopup(message: "Failed to fetch workout prompt.")
                 }
             }
         }
     }
-    private func presentMealPlanView() {
-            let mealPlanVC = MealPlanViewController()
-            mealPlanVC.modalPresentationStyle = .fullScreen
-            present(mealPlanVC, animated: true, completion: nil)
-        }
+
     private func fetchWorkoutPrompt(for action: String, generativeModel: GenerativeModel, completion: @escaping (Bool, String) -> Void) {
-        // Construct the prompt based on the action
         let prompt = "Give me a workout for \(action.lowercased()). Max 1000 characters, bullet point format with dashes."
-        
-        // Use the GenerativeModel to fetch the workout prompt
+
         Task {
             do {
                 let response = try await generativeModel.generateContent(prompt)
@@ -163,29 +176,14 @@ class AIController: UIViewController {
             }
         }
     }
-    
+
     private func showPopup(message: String) {
         let alert = UIAlertController(title: "Workout Prompt", message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default))
         present(alert, animated: true, completion: nil)
     }
-    
-    // Action for the "Show Workout" button
-    @objc private func showWorkoutButtonTapped() {
-        guard let workoutText = workoutText else {
-            print("No workout text available")
-            return
-        }
-        
-        // Display the saved workout text
-        let alert = UIAlertController(title: "Saved Workout", message: workoutText, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default))
-        present(alert, animated: true, completion: nil)
-    }
-    
-    // Helper method to load the API key from the plist
+
     private func loadAPIKey() -> String? {
-        // Get the path to the GeminiAPI.plist file
         guard let path = Bundle.main.path(forResource: "GeminiAPI", ofType: "plist"),
               let xml = FileManager.default.contents(atPath: path),
               let plist = try? PropertyListSerialization.propertyList(from: xml, options: [], format: nil),
