@@ -62,13 +62,23 @@ class AIController: UIViewController {
         stackView.distribution = .fillEqually
         stackView.alignment = .fill
         stackView.spacing = 20
-        
+        var messager = "workout_1"
         // Iterate through the button titles and create buttons
         for title in buttonTitles {
             let button = UIButton(type: .system)
             button.setTitle(title, for: .normal)
             button.setTitleColor(.white, for: .normal)
-            if let image = UIImage(named: "workout_1") {
+            if title == "Cardio" {
+                    messager = "workout_1"
+                } else if title == "Push" {
+                    messager = "workout_2"
+                } else if title == "Pull" {
+                    messager = "workout_3"
+                } else {
+                    messager = "workout_4"
+                }
+                    
+            if let image = UIImage(named: messager) {
                 button.setBackgroundImage(image, for: .normal)
             } else {
                 // Fallback background color if image isn't found
@@ -94,7 +104,7 @@ class AIController: UIViewController {
             button.layer.masksToBounds = true
             // Set fixed height for buttons
             button.heightAnchor.constraint(equalToConstant:100).isActive = true
-            button.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width - 40).isActive = true
+            button.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width).isActive = true
             
             stackView.addArrangedSubview(button)
             
