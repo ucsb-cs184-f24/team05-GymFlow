@@ -9,7 +9,8 @@ I made implemented UI changes to all the pages so that there is a consistent des
 I contributed primarily to the development of the BusyLevelView and HistogramView components. My work focused on creating a visually appealing and functional speedometer that dynamically adjusts based on real-time gym data, ensuring smooth animations and accurate needle positioning. I also improved the UI for the HistogramView by formatting the time labels for better readability. Additionally, I implemented authentication using FirebaseAuth to enable easy phone number login and refined the UI for both authentication pages. Lastly, I fixed the data retrieval process by converting the API output from descriptive "words" to actionable numerical data, enhancing the app's functionality and accuracy.
 
 ## Nevin
-I worked on the initial prototypes of the UI. In addition to this, I also created the feature that allowed you to get meal advice for the food provided in the dining halls.
+My initial work involved with creating the first prototypes for the UI of this app. Later, I became focused on building a feature that allowed users to get nutritional advice about the food they eat at dining halls. Finally. I worked on the user interface of the AI workout plan. I added pictures to the buttons and gave the screen a cleaner look.
+
 
 ## Thomas
 Worked on connecting sign on page with app main screen. Helped with back-end research for API. Created app layout design and helped introduce our current features. Created Gemini feature for workout prompts.
