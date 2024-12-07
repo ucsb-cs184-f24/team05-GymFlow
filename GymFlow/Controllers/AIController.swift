@@ -103,7 +103,7 @@ class AIController: UIViewController {
             button.layer.cornerRadius = 15
             button.layer.masksToBounds = true
             // Set fixed height for buttons
-            button.heightAnchor.constraint(equalToConstant:100).isActive = true
+            button.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height *  0.1).isActive = true
             button.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width).isActive = true
             
             stackView.addArrangedSubview(button)
