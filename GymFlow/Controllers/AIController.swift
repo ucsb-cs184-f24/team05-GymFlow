@@ -80,7 +80,7 @@ class AIController: UIViewController {
 
         NSLayoutConstraint.activate([
             stackView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
-            stackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 20),
+            stackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
             stackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
             stackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
             stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -20)

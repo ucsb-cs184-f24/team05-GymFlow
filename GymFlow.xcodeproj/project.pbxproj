@@ -35,6 +35,8 @@
 		C2C7D1962CFE77EF0041E64F /* CameraCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C7D18F2CFE77EF0041E64F /* CameraCaptureView.swift */; };
 		C2DFA7B22CF555CC00854B1D /* AIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DFA7B12CF555C700854B1D /* AIController.swift */; };
 		C2DFA7B52CF55D0E00854B1D /* GoogleGenerativeAI in Frameworks */ = {isa = PBXBuildFile; productRef = C2DFA7B42CF55D0E00854B1D /* GoogleGenerativeAI */; };
+		C2ED5EC42D0405BE00B1284C /* UCSB.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2ED5EC32D0405BE00B1284C /* UCSB.plist */; };
+		C2ED5EC52D0405BE00B1284C /* GeminiAPI.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2ED5EC22D0405BE00B1284C /* GeminiAPI.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -81,6 +83,8 @@
 		C2C7D1912CFE77EF0041E64F /* IDModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDModel.swift; sourceTree = "<group>"; };
 		C2C7D1922CFE77EF0041E64F /* IDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDView.swift; sourceTree = "<group>"; };
 		C2DFA7B12CF555C700854B1D /* AIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIController.swift; sourceTree = "<group>"; };
+		C2ED5EC22D0405BE00B1284C /* GeminiAPI.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = GeminiAPI.plist; sourceTree = "<group>"; };
+		C2ED5EC32D0405BE00B1284C /* UCSB.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = UCSB.plist; sourceTree = "<group>"; };
 		E6AB0EB2062284B5CDBAFE27 /* Pods-GymFlow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymFlow.debug.xcconfig"; path = "Target Support Files/Pods-GymFlow/Pods-GymFlow.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -134,6 +138,8 @@
 				6201F2082CC58A3E00E1BAEB /* Assets.xcassets */,
 				6201F20A2CC58A3E00E1BAEB /* LaunchScreen.storyboard */,
 				C250096A2D0100630012A4CB /* GoogleService-Info.plist */,
+				C2ED5EC22D0405BE00B1284C /* GeminiAPI.plist */,
+				C2ED5EC32D0405BE00B1284C /* UCSB.plist */,
 				C2034E0B2D037A9B00EDEFE9 /* GeminiAPI.plist */,
 				C2034E0C2D037A9B00EDEFE9 /* UCSB.plist */,
 			);
@@ -243,6 +249,8 @@
 				6201F20C2CC58A3E00E1BAEB /* Base in Resources */,
 				C2034E0D2D037A9B00EDEFE9 /* UCSB.plist in Resources */,
 				C2034E0E2D037A9B00EDEFE9 /* GeminiAPI.plist in Resources */,
+				C2ED5EC42D0405BE00B1284C /* UCSB.plist in Resources */,
+				C2ED5EC52D0405BE00B1284C /* GeminiAPI.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,7 +469,7 @@
 				CODE_SIGN_ENTITLEMENTS = GymFlow/GymFlow.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = R8X3M4W8BH;
+				DEVELOPMENT_TEAM = R2FTZ5HQ3Y;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GymFlow/Info.plist;
@@ -478,7 +486,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = team05.GymFlow10;
+				PRODUCT_BUNDLE_IDENTIFIER = team05.GymFlow107;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -495,7 +503,7 @@
 				CODE_SIGN_ENTITLEMENTS = GymFlow/GymFlow.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = R8X3M4W8BH;
+				DEVELOPMENT_TEAM = R2FTZ5HQ3Y;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GymFlow/Info.plist;
@@ -512,7 +520,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = team05.GymFlow10;
+				PRODUCT_BUNDLE_IDENTIFIER = team05.GymFlow107;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
