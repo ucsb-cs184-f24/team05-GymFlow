@@ -17,8 +17,6 @@
 		6201F20C2CC58A3E00E1BAEB /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 6201F20B2CC58A3E00E1BAEB /* Base */; };
 		622D19582CC753F100D9C2D1 /* MainViewController.swift .swift in Sources */ = {isa = PBXBuildFile; fileRef = 622D19572CC753F100D9C2D1 /* MainViewController.swift .swift */; };
 		622D195A2CC7547E00D9C2D1 /* LogoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622D19592CC7547E00D9C2D1 /* LogoutViewController.swift */; };
-		623B22BF2D027BEF0052CA03 /* UCSB.plist in Resources */ = {isa = PBXBuildFile; fileRef = 623B22BD2D027BEF0052CA03 /* UCSB.plist */; };
-		623B22C02D027BEF0052CA03 /* GeminiAPI.plist in Resources */ = {isa = PBXBuildFile; fileRef = 623B22BE2D027BEF0052CA03 /* GeminiAPI.plist */; };
 		625658542CEBF67500576A6E /* ForeCastController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625658532CEBF5F600576A6E /* ForeCastController.swift */; };
 		625658562CEC259A00576A6E /* ForecastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625658552CEC258B00576A6E /* ForecastModel.swift */; };
 		625658582CEC25C200576A6E /* HistogramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625658572CEC25B800576A6E /* HistogramView.swift */; };
@@ -26,6 +24,9 @@
 		62E712292CC58B080064CBF4 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E712282CC58B080064CBF4 /* AuthManager.swift */; };
 		62E7122C2CC58CDB0064CBF4 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E7122B2CC58CDB0064CBF4 /* AccountViewController.swift */; };
 		62E7122E2CC58CE60064CBF4 /* SMSCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E7122D2CC58CE60064CBF4 /* SMSCodeViewController.swift */; };
+		64AC0BA604C90167E23192D6 /* Pods_GymFlow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9872C7E219C2A1EFEAAAB06E /* Pods_GymFlow.framework */; };
+		C2034E0D2D037A9B00EDEFE9 /* UCSB.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2034E0C2D037A9B00EDEFE9 /* UCSB.plist */; };
+		C2034E0E2D037A9B00EDEFE9 /* GeminiAPI.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2034E0B2D037A9B00EDEFE9 /* GeminiAPI.plist */; };
 		C250096E2D0100630012A4CB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C250096A2D0100630012A4CB /* GoogleService-Info.plist */; };
 		C26487ED2CD82A2A00ACC29B /* BusyLevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26487EC2CD82A2A00ACC29B /* BusyLevelView.swift */; };
 		C26487F12CD8301100ACC29B /* BusyLevelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26487F02CD8301100ACC29B /* BusyLevelModel.swift */; };
@@ -35,6 +36,8 @@
 		C2C7D1962CFE77EF0041E64F /* CameraCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C7D18F2CFE77EF0041E64F /* CameraCaptureView.swift */; };
 		C2DFA7B22CF555CC00854B1D /* AIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DFA7B12CF555C700854B1D /* AIController.swift */; };
 		C2DFA7B52CF55D0E00854B1D /* GoogleGenerativeAI in Frameworks */ = {isa = PBXBuildFile; productRef = C2DFA7B42CF55D0E00854B1D /* GoogleGenerativeAI */; };
+		C2ED5EC42D0405BE00B1284C /* UCSB.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2ED5EC32D0405BE00B1284C /* UCSB.plist */; };
+		C2ED5EC52D0405BE00B1284C /* GeminiAPI.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2ED5EC22D0405BE00B1284C /* GeminiAPI.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -64,8 +67,6 @@
 		62075E402CC6BF7700C0C0B1 /* GymFlow.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GymFlow.entitlements; sourceTree = "<group>"; };
 		622D19572CC753F100D9C2D1 /* MainViewController.swift .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController.swift .swift"; sourceTree = "<group>"; };
 		622D19592CC7547E00D9C2D1 /* LogoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutViewController.swift; sourceTree = "<group>"; };
-		623B22BD2D027BEF0052CA03 /* UCSB.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = UCSB.plist; path = ../../../Downloads/UCSB.plist; sourceTree = "<group>"; };
-		623B22BE2D027BEF0052CA03 /* GeminiAPI.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = GeminiAPI.plist; path = ../../../Downloads/GeminiAPI.plist; sourceTree = "<group>"; };
 		625658532CEBF5F600576A6E /* ForeCastController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForeCastController.swift; sourceTree = "<group>"; };
 		625658552CEC258B00576A6E /* ForecastModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastModel.swift; sourceTree = "<group>"; };
 		625658572CEC25B800576A6E /* HistogramView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistogramView.swift; sourceTree = "<group>"; };
@@ -73,7 +74,9 @@
 		62E712282CC58B080064CBF4 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		62E7122B2CC58CDB0064CBF4 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		62E7122D2CC58CE60064CBF4 /* SMSCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMSCodeViewController.swift; sourceTree = "<group>"; };
-		78DF0266F0175D3A6BA9FD9D /* Pods-GymFlow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymFlow.debug.xcconfig"; path = "Target Support Files/Pods-GymFlow/Pods-GymFlow.debug.xcconfig"; sourceTree = "<group>"; };
+		9872C7E219C2A1EFEAAAB06E /* Pods_GymFlow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GymFlow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2034E0B2D037A9B00EDEFE9 /* GeminiAPI.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = GeminiAPI.plist; sourceTree = "<group>"; };
+		C2034E0C2D037A9B00EDEFE9 /* UCSB.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = UCSB.plist; sourceTree = "<group>"; };
 		C250096A2D0100630012A4CB /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C26487EC2CD82A2A00ACC29B /* BusyLevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusyLevelView.swift; sourceTree = "<group>"; };
 		C26487F02CD8301100ACC29B /* BusyLevelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusyLevelModel.swift; sourceTree = "<group>"; };
@@ -82,6 +85,9 @@
 		C2C7D1912CFE77EF0041E64F /* IDModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDModel.swift; sourceTree = "<group>"; };
 		C2C7D1922CFE77EF0041E64F /* IDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDView.swift; sourceTree = "<group>"; };
 		C2DFA7B12CF555C700854B1D /* AIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIController.swift; sourceTree = "<group>"; };
+		C2ED5EC22D0405BE00B1284C /* GeminiAPI.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = GeminiAPI.plist; sourceTree = "<group>"; };
+		C2ED5EC32D0405BE00B1284C /* UCSB.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = UCSB.plist; sourceTree = "<group>"; };
+		E6AB0EB2062284B5CDBAFE27 /* Pods-GymFlow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymFlow.debug.xcconfig"; path = "Target Support Files/Pods-GymFlow/Pods-GymFlow.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,8 +132,10 @@
 				6201F2082CC58A3E00E1BAEB /* Assets.xcassets */,
 				6201F20A2CC58A3E00E1BAEB /* LaunchScreen.storyboard */,
 				C250096A2D0100630012A4CB /* GoogleService-Info.plist */,
-				623B22BE2D027BEF0052CA03 /* GeminiAPI.plist */,
-				623B22BD2D027BEF0052CA03 /* UCSB.plist */,
+				C2ED5EC22D0405BE00B1284C /* GeminiAPI.plist */,
+				C2ED5EC32D0405BE00B1284C /* UCSB.plist */,
+				C2034E0B2D037A9B00EDEFE9 /* GeminiAPI.plist */,
+				C2034E0C2D037A9B00EDEFE9 /* UCSB.plist */,
 			);
 			path = GymFlow;
 			sourceTree = "<group>";
@@ -239,10 +247,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C250096E2D0100630012A4CB /* GoogleService-Info.plist in Resources */,
-				623B22BF2D027BEF0052CA03 /* UCSB.plist in Resources */,
 				6201F2092CC58A3E00E1BAEB /* Assets.xcassets in Resources */,
-				623B22C02D027BEF0052CA03 /* GeminiAPI.plist in Resources */,
 				6201F20C2CC58A3E00E1BAEB /* Base in Resources */,
+				C2034E0D2D037A9B00EDEFE9 /* UCSB.plist in Resources */,
+				C2034E0E2D037A9B00EDEFE9 /* GeminiAPI.plist in Resources */,
+				C2ED5EC42D0405BE00B1284C /* UCSB.plist in Resources */,
+				C2ED5EC52D0405BE00B1284C /* GeminiAPI.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,7 +471,7 @@
 				CODE_SIGN_ENTITLEMENTS = GymFlow/GymFlow.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = R8X3M4W8BH;
+				DEVELOPMENT_TEAM = R2FTZ5HQ3Y;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GymFlow/Info.plist;
@@ -478,7 +488,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = team05.GymFlow10;
+				PRODUCT_BUNDLE_IDENTIFIER = team05.GymFlow107;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -495,7 +505,7 @@
 				CODE_SIGN_ENTITLEMENTS = GymFlow/GymFlow.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = R8X3M4W8BH;
+				DEVELOPMENT_TEAM = R2FTZ5HQ3Y;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GymFlow/Info.plist;
@@ -512,7 +522,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = team05.GymFlow10;
+				PRODUCT_BUNDLE_IDENTIFIER = team05.GymFlow107;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
