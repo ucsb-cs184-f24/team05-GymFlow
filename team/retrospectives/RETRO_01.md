@@ -17,7 +17,15 @@
 * What advice would you give to the next person leading a retro
   based on what you learned today: Initiate the meeting and ask the questions.
 
-
 ## Outcomes
 
 * With the retro goal, we were able to agree on how the home screen looks with the gym busy level. The Kanban board is not as actively used, but is better now.
+
+## Experiment/Change
+
+* A brief description of what constitutes your change/experiment
+    Our change was to make better use of the Kanban board and keep it updated.
+* A brief assessment of how its results (did it improve things? move the needle at all?)
+    It's very useful for delegating tasks effectively.
+* A decision going forward: keep the change, revert to previous procedure, make a new change?
+    We will keep the change going forward.
